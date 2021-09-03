@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8" name="Vlad" content="Простой опросник">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="styles/index.css" rel="stylesheet">
     <title>Опросник</title>
 </head>
 <body>
 <header>
-    <h1>Опросник</h1>
+    <img src="img/logo.jpg" alt="Logo" height="200" width="300">
+    <h1>Опрос</h1>
 </header>
-
+<p class="description">
+    Пройдите тест
+</p>
+<form>
+    <div class="question">
+        <p>
+            Какой фреймворк для <a href="https://learn.javascript.ru/">Javascript</a> вы предпочитаете?
+        </p>
+        <label for="answer-1">React</label>
+        <input type="checkbox" id="answer-1">
+        <img src="img/react.png" alt="React" height="200" width="300"><br>
+        <label for="answer-2">Angular</label>
+        <input type="checkbox" id="answer-2">
+        <img src="img/angular.png" alt="Angular"  height="200" width="200"><br>
+        <label for="answer-3">Vue</label>
+        <input type="checkbox" id="answer-3">
+        <img src="img/vue.png" alt="Vue"  height="200" width="200">
+    </div>
+    <input type="submit">
+</form>
+<footer>
+    <p>Контактная информация</p>
+    <table>
+        <tr>
+            <td>Телефон</td>
+            <td>Телеграм</td>
+            <td>Почта</td>
+        </tr>
+        <tr>
+            <td>+79223664973</td>
+            <td>@vakonkov</td>
+            <td>v.a.konkov@mail.ru</td>
+        </tr>
+    </table>
+</footer>
 </body>
 </html>
