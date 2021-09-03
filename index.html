@@ -7,26 +7,34 @@
     <title>Опросник</title>
 </head>
 <body>
-<header>
+<header class="alignment">
     <img src="img/logo.jpg" alt="Logo" height="200" width="300">
     <h1>Опрос</h1>
 </header>
 <p class="description">
     Пройдите тест
 </p>
+<div>
+    <p> Полезная информация</p>
+    <ul>
+        <li>1 пункт</li>
+        <li>2 пункт</li>
+        <li>3 пункт</li>
+    </ul>
+</div>
 <form>
     <div class="question">
         <p>
             Какой фреймворк для <a href="https://learn.javascript.ru/">Javascript</a> вы предпочитаете?
         </p>
-        <label for="answer-1">React</label>
         <input type="checkbox" id="answer-1">
+        <label for="answer-1">React</label>
         <img src="img/react.png" alt="React" height="200" width="300"><br>
-        <label for="answer-2">Angular</label>
         <input type="checkbox" id="answer-2">
+        <label for="answer-2">Angular</label>
         <img src="img/angular.png" alt="Angular"  height="200" width="200"><br>
-        <label for="answer-3">Vue</label>
         <input type="checkbox" id="answer-3">
+        <label for="answer-3">Vue</label>
         <img src="img/vue.png" alt="Vue"  height="200" width="200">
     </div>
     <input type="submit">
@@ -45,6 +53,7 @@
             <td>v.a.konkov@mail.ru</td>
         </tr>
     </table>
+    <time>03-09-2021</time>
 </footer>
 </body>
 </html>
