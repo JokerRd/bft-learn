@@ -13,7 +13,6 @@ html {
 }
 
 .header {
-    border: solid;
     display: flex;
 }
 
@@ -21,7 +20,6 @@ html {
     width: 200px;
     height: 200px;
     padding: 5px 5px 5px 5px;
-    border: solid;
     margin-right: auto;
 }
 .aligner {
@@ -32,13 +30,12 @@ html {
 
 .header-description {
     display: flex;
-    border: solid;
     flex-direction: column;
     align-items: center;
 }
 
 .description {
-
+    font-size: 20px;
 }
 
 .flex-container {
@@ -49,8 +46,11 @@ html {
     border: solid;
     width: 15vw;
     min-width: 100px;
+    font-size: 20px;
 }
-
+.sidebar-header {
+    text-align: center;
+}
 .sb-align {
 
 }
@@ -62,8 +62,21 @@ html {
 .main {
     border: solid;
     width: 85vw;
+    padding: 5%;
 }
+.question {
+    font-size: 20px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding: 2%;
+    border: solid;
+}
+.question-header {
+    font-size: 30px;
+}
+.question-description {
 
+}
 .footer {
     border: solid;
 }
@@ -86,6 +99,8 @@ html {
 }
 .time {
     margin-right: 10px;
+    color: azure;
+    font-size: 16px;
 }
 .table {
     table-layout: fixed;
