@@ -5,7 +5,9 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
+.background {
+    background-image: url("../img/background.png");
+}
 .border-test {
     border: solid;
 }
