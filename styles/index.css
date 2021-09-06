@@ -4,15 +4,29 @@ html {
 *, *::before, *::after {
  box-sizing: inherit;
 }
-
-.header {
+.border-test {
  border: solid;
 }
-.logo {
+.header {
  border: solid;
- width: 300px;
- background-image: url("../img/logo.jpg");
- background-repeat: no-repeat;
+ display: flex;
+}
+.header-description {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ flex-grow: 1;
+}
+.header-name {
+ align-self: center;
+}
+.logo {
+ width: 200px;
+ height: 200px;
+ padding: 5px 5px 5px 5px;
+}
+.description {
+
 }
 .flex-container {
  display: flex;
