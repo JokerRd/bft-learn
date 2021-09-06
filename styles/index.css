@@ -1,53 +1,69 @@
 html {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *, *::before, *::after {
- box-sizing: inherit;
+    box-sizing: inherit;
 }
+
 .border-test {
- border: solid;
+    border: solid;
 }
+
 .header {
- border: solid;
- display: flex;
+    border: solid;
+    display: flex;
 }
-.header-description {
- display: flex;
- flex-direction: column;
- align-items: center;
- flex-grow: 1;
-}
-.header-name {
- align-self: center;
-}
+
 .logo {
- width: 200px;
- height: 200px;
- padding: 5px 5px 5px 5px;
+    width: 200px;
+    height: 200px;
+    padding: 5px 5px 5px 5px;
+    border: solid;
+    margin-right: auto;
 }
+.aligner {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+}
+
+.header-description {
+    display: flex;
+    border: solid;
+    flex-direction: column;
+    align-items: center;
+}
+
 .description {
 
 }
+
 .flex-container {
- display: flex;
+    display: flex;
 }
+
 .sidebar {
- border: solid;
- width: 15vw;
- min-width: 100px;
+    border: solid;
+    width: 15vw;
+    min-width: 100px;
 }
+
 .sb-align {
 
 }
+
 .sb-size {
- width: 300px;
+    width: 300px;
 }
+
 .main {
- border: solid;
- width: 85vw;
+    border: solid;
+    width: 85vw;
 }
+
 .footer {
- border: solid;
+    border: solid;
 }
 
 .alignment {
