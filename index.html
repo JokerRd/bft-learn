@@ -32,20 +32,23 @@
     <div class="main">
         <form>
             <div class="question">
-                <p>
+                <div class="question-header">1 вопрос</div>
+                <p class="question-description">
                     Напишите ваше имя
                 </p>
-                <input name="name">
-            </div>
-            <div>
-                <p>
-                    Сколько вам лет?
-                </p>
-                <input name="age" type="number" min="4" max="100">
+                <input class="question-input" name="name">
             </div>
             <div class="question">
-                <p>В каком регионе проживаете?</p>
-                <select name="region">
+                <div class="question-header">2 вопрос</div>
+                <p class="question-description">
+                    Сколько вам лет?
+                </p>
+                <input class="question-number" name="age" type="number" min="4" max="100">
+            </div>
+            <div class="question">
+                <div class="question-header">3 вопрос</div>
+                <p class="question-description">В каком регионе проживаете?</p>
+                <select class="question-select" name="region">
                     <option>Урал</option>
                     <option>Сибирь</option>
                     <option>Поволжье</option>
@@ -55,7 +58,8 @@
                 </select>
             </div>
             <div class="question">
-                <p>
+                <div class="question-header">4 вопрос</div>
+                <p class="question-description">
                     Какой фреймворк для <a href="https://learn.javascript.ru/">Javascript</a> вы предпочитаете?
                 </p>
                 <input type="checkbox" id="answer-1" name="framework">
