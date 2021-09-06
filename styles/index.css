@@ -65,7 +65,33 @@ html {
 .footer {
     border: solid;
 }
-
+.footer-flexbox {
+    display: flex;
+    justify-content: center;
+}
+.footer-contact {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+}
+.footer-color {
+    background-color: #7a7a7a;
+}
+.footer-additional {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #616161;
+}
+.time {
+    margin-right: 10px;
+}
+.table {
+    table-layout: fixed;
+    width: 100%;
+}
+.table-row {
+    text-align: center;
+}
 .alignment {
 
 }
