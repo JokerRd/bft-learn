@@ -1,14 +1,36 @@
+html {
+ box-sizing: border-box;
+}
+*, *::before, *::after {
+ box-sizing: inherit;
+}
+
 .header {
  border: solid;
 }
 .logo {
  border: solid;
+ width: 300px;
+ background-image: url("../img/logo.jpg");
+ background-repeat: no-repeat;
+}
+.flex-container {
+ display: flex;
 }
 .sidebar {
  border: solid;
+ width: 15vw;
+ min-width: 100px;
+}
+.sb-align {
+
+}
+.sb-size {
+ width: 300px;
 }
 .main {
  border: solid;
+ width: 85vw;
 }
 .footer {
  border: solid;
