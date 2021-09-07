@@ -13,7 +13,9 @@
 </head>
 <body>
 <header class="header">
-    <img class="logo" src="<c:url value="component/img/logo.png"/>" alt="Logo">
+    <div class="logo">
+        <img class="logo-img" src="<c:url value="component/img/logo.png"/>" alt="Logo">
+    </div>
     <div class="header-description">
         <h1 class="header-name">Опрос</h1>
         <p class="description">

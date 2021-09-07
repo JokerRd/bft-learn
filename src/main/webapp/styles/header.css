@@ -7,6 +7,14 @@
     height: 200px;
     padding: 5px 5px 5px 5px;
     margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.logo-img {
+    width: 90%;
+    height: 90%;
+    margin: 0;
 }
 .aligner {
     width: 200px;

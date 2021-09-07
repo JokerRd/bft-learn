@@ -15,7 +15,8 @@
     <link href="styles/footer.css" rel="stylesheet">
     <link href="styles/sidebar.css" rel="stylesheet">
     <link href="styles/survey.css" rel="stylesheet">
-    <script type="text/javascript" src="scripts/footer.js/"></script>
+    <script type="text/javascript" src="scripts/footer-time.js/"></script>
+    <script type="text/javascript" src="scripts/header-logo.js"></script>
     <title>Опросник</title>
 </head>
 <body class="background">
