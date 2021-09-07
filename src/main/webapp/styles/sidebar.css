@@ -4,11 +4,11 @@
     min-width: 100px;
     font-size: 20px;
     position: absolute;
-    transition-property: left;
-    transition-duration: 1s;
 }
 .sidebar-close {
     left: -100%;
+    transition-property: left;
+    transition-duration: 1s;
 }
 .sidebar-open {
     left: 0;

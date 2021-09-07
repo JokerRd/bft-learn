@@ -28,9 +28,12 @@ const setOpenStyle = () => {
 const setStyle = (removeClassStyle, addClassStyle) => {
     const nameClassSidebar = '.sidebar';
     let sidebar = document.querySelector(nameClassSidebar);
+    console.log(sidebar)
     sidebar.classList.remove(removeClassStyle)
     sidebar.classList.add(addClassStyle)
 }
 
-window.onload(setActionCloseOnButton)
-window.onload(setActionOpenOnButton)
+window.onload = () => {
+    setActionOpenOnButton();
+    setActionCloseOnButton();
+}
