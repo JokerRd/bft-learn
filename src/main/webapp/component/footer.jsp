@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="footer-additional">
-        <time class="time">03-09-2021</time>
+        <time class="time"></time>
     </div>
 </footer>
 </body>
