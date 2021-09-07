@@ -3,7 +3,26 @@
     width: 15vw;
     min-width: 100px;
     font-size: 20px;
+    position: absolute;
+    transition-property: left;
+    transition-duration: 1s;
+}
+.sidebar-close {
+    left: -100%;
+}
+.sidebar-open {
+    left: 0;
 }
 .sidebar-header {
     text-align: center;
+}
+.sidebar-button {
+    min-width: 50px;
+    cursor: pointer;
+}
+.sidebar-button-open {
+
+}
+.sidebar-button-close {
+
 }

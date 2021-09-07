@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: v.konkov
@@ -12,6 +13,10 @@
 </head>
 <body>
 <aside class="sidebar">
+    <button class="sidebar-button sidebar-button-close">
+        Закрыть
+    </button>
+    <button class="sidebar-button sidebar-button-open">Открыть</button>
     <p class="sidebar-header"> Полезные ссылки</p>
     <ul class="list">
         <li><a href="http://htmlbook.ru/">Htmlbook</a></li>
