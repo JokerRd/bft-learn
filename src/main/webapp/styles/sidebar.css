@@ -13,6 +13,7 @@
     position: sticky;
     top: calc(50vh - 200px);
     visibility: visible;
+    background: white;
 }
 .sidebar-close {
     left: -100%;
