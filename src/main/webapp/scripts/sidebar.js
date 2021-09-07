@@ -1,17 +1,17 @@
-const setButtonActionClose = () => {
+const setActionCloseOnButton = () => {
     const nameClassButtonClose = '.sidebar-button-close';
-    setButtonAction(nameClassButtonClose, setCloseStyle);
+    setActionOnButton(nameClassButtonClose, setCloseStyle);
 }
 
-const setButtonActionOpen = () => {
+const setActionOpenOnButton = () => {
     const nameClassButtonOpen = '.sidebar-button-open';
-    setButtonAction(nameClassButtonOpen, setOpenStyle);
+    setActionOnButton(nameClassButtonOpen, setOpenStyle);
 }
 
-const setButtonAction = (nameClassButton, action) => {
-    let nameEventClick = "click"
+const setActionOnButton = (nameClassButton, actionOnButton) => {
+    const nameEventClick = "click"
     let button = document.querySelector(nameClassButton);
-    button.addEventListener(nameEventClick, action)
+    button.addEventListener(nameEventClick, actionOnButton)
 }
 
 const nameClassSidebarOpen = ".sidebar-open";
@@ -32,5 +32,5 @@ const setStyle = (removeClassStyle, addClassStyle) => {
     sidebar.classList.add(addClassStyle)
 }
 
-window.onload(setButtonActionClose)
-window.onload(setButtonActionOpen)
+window.onload(setActionCloseOnButton)
+window.onload(setActionOpenOnButton)
