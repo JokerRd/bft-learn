@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: v.konkov
@@ -12,7 +13,7 @@
 </head>
 <body>
 <header class="header">
-    <img class="logo" src="img/logo.png" alt="Logo">
+    <img class="logo" src="<c:url value="component/img/logo.png"/>" alt="Logo">
     <div class="header-description">
         <h1 class="header-name">Опрос</h1>
         <p class="description">

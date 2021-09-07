@@ -1,0 +1,9 @@
+spring:
+  security:
+    user:
+      name: 1
+      password: 1
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
