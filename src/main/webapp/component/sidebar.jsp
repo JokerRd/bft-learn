@@ -12,18 +12,20 @@
     <title></title>
 </head>
 <body>
-<aside class="sidebar">
-    <button class="sidebar-button sidebar-button-close">
-        Закрыть
-    </button>
-    <button class="sidebar-button sidebar-button-open">Открыть</button>
-    <p class="sidebar-header"> Полезные ссылки</p>
-    <ul class="list">
-        <li><a href="http://htmlbook.ru/">Htmlbook</a></li>
-        <li><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics"> Основы
-            CSS</a></li>
-        <li><a href="https://learn.javascript.ru/">Уроки JavaScript</a></li>
-    </ul>
-</aside>
+<div class="absolute">
+    <aside class="sidebar">
+        <button class="sidebar-button sidebar-button-close">
+            Закрыть
+        </button>
+        <button class="sidebar-button sidebar-button-open">Открыть</button>
+        <p class="sidebar-header"> Полезные ссылки</p>
+        <ul class="list">
+            <li><a href="http://htmlbook.ru/">Htmlbook</a></li>
+            <li><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics"> Основы
+                CSS</a></li>
+            <li><a href="https://learn.javascript.ru/">Уроки JavaScript</a></li>
+        </ul>
+    </aside>
+</div>
 </body>
 </html>

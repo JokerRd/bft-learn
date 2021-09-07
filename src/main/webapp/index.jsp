@@ -19,10 +19,10 @@
     <script type="text/javascript" src="scripts/sidebar.js"></script>
     <title>Опросник</title>
 </head>
-<body class="background">
+<body class="background relative">
 <jsp:include page="component/header.jsp"/>
+<jsp:include page="component/sidebar.jsp"/>
 <div class="flex-container">
-    <jsp:include page="component/sidebar.jsp"/>
     <jsp:include page="component/survey.jsp"/>
 </div>
 <jsp:include page="component/footer.jsp"/>

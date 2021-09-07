@@ -1,9 +1,18 @@
+.absolute {
+    position: absolute;
+    top: var(--header-size);
+    bottom: 0;
+    visibility: hidden;
+}
 .sidebar {
     border: solid;
     width: 15vw;
     min-width: 100px;
     font-size: 20px;
-    position: absolute;
+    height: 400px;
+    position: sticky;
+    top: calc(50vh - 200px);
+    visibility: visible;
 }
 .sidebar-close {
     left: -100%;
