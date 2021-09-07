@@ -12,9 +12,17 @@
     justify-content: center
 }
 .logo-img {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     margin: 0;
+}
+.logo-img-transition {
+    transition-property: width, height;
+    transition-duration: 1s;
+}
+.logo-img-transition:hover {
+    width: 100%;
+    height: 100%;
 }
 .aligner {
     width: 200px;

@@ -14,7 +14,7 @@
 <body>
 <header class="header">
     <div class="logo">
-        <img class="logo-img" src="<c:url value="component/img/logo.png"/>" alt="Logo">
+        <img class="logo-img logo-img-transition" src="<c:url value="component/img/logo.png"/>" alt="Logo">
     </div>
     <div class="header-description">
         <h1 class="header-name">Опрос</h1>
