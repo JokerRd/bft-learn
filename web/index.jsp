@@ -1,0 +1,28 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: v.konkov
+  Date: 06.09.2021
+  Time: 20:20
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="Vlad" content="Простой опросник">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="styles/index.css" rel="stylesheet">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet">
+    <link href="styles/sidebar.css" rel="stylesheet">
+    <link href="styles/survey.css" rel="stylesheet">
+    <title>Опросник</title>
+</head>
+<body class="background">
+<jsp:include page="component/header.jsp"/>
+<div class="flex-container">
+    <jsp:include page="component/sidebar.jsp"/>
+    <jsp:include page="component/survey.jsp"/>
+</div>
+<jsp:include page="component/footer.jsp"/>
+</body>
+</html>

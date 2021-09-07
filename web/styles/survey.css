@@ -1,0 +1,15 @@
+.main {
+    border: solid;
+    width: 85vw;
+    padding: 5%;
+}
+.question {
+    font-size: 20px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding: 2%;
+    border: solid;
+}
+.question-header {
+    font-size: 30px;
+}

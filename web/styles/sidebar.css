@@ -1,0 +1,9 @@
+.sidebar {
+    border: solid;
+    width: 15vw;
+    min-width: 100px;
+    font-size: 20px;
+}
+.sidebar-header {
+    text-align: center;
+}
