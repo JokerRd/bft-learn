@@ -24,7 +24,7 @@
         </p>
     </div>
     <div class="aligner">
-        <p class="sign-out sign-out-font">Выйти</p>
+        <div class="sign-out sign-out-font">Выйти</div>
     </div>
 </header>
 </body>
