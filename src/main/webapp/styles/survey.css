@@ -26,3 +26,15 @@
     display: flex;
     justify-content: center;
 }
+
+.question-img-illumination{
+    transition-property: border, opacity;
+    transition-duration: 0.5s;
+    border: 0;
+    opacity: 1;
+}
+.question-img-illumination:hover {
+    cursor: pointer;
+    border: medium dashed red;
+    opacity: 0.6;
+}

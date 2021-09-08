@@ -51,21 +51,21 @@
                     <label for="answer-1">React</label>
                 </div>
                 <div class="checkbox-img">
-                    <img src="<c:url value="component/img/react.png"/>" alt="React" height="200" width="300">
+                    <img class="question-img-illumination" src="<c:url value="component/img/react.png"/>" alt="React" height="200" width="300">
                 </div>
                 <div class="checkbox-point">
                     <input type="checkbox" id="answer-2" name="framework">
                     <label for="answer-2">Angular</label>
                 </div>
                 <div class="checkbox-img">
-                    <img src="<c:url value="component/img/angular.png"/>" alt="Angular" height="200" width="200">
+                    <img class="question-img-illumination" src="<c:url value="component/img/angular.png"/>" alt="Angular" height="200" width="200">
                 </div>
                 <div class="checkbox-point">
                     <input type="checkbox" id="answer-3" name="framework">
                     <label for="answer-3">Vue</label>
                 </div>
                 <div class="checkbox-img">
-                    <img src="<c:url value="component/img/vue.png"/>" alt="Vue" height="200" width="200">
+                    <img class="question-img-illumination" src="<c:url value="component/img/vue.png"/>" alt="Vue" height="200" width="200">
                 </div>
             </div>
         </div>
