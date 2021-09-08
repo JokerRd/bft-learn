@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: v.konkov
@@ -28,7 +29,15 @@
     </div>
     <div class="footer-additional">
         <div class="language">
-            Смена языка: <span class="language-button language-ru language-active">ru</span> / <span class="language-button language-en">en</span>
+            Смена языка: <span class="language-button language-ru language-active">
+            <span class="tooltip"><img class="tooltip-language-img" src="<c:url value="component/img/ru.png"/>" alt="ru"></span>ru</span>
+            /
+            <span class="language-button language-en">
+                <span class="tooltip">
+                    <img class="tooltip-language-img" src="<c:url value="component/img/en.png"/>" alt="en">
+                </span>
+                en
+            </span>
         </div>
         <time class="time"></time>
     </div>

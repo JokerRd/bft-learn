@@ -27,11 +27,51 @@
     background-color: #303030;
 }
 .language-button{
+    position: relative;
     padding-left: 10px;
     padding-right: 10px;
 }
+.tooltip{
+    visibility: hidden;
+    --width-tooltip: 80px;
+    width: var(--width-tooltip);
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 0.9s;
+}
+
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
 .language-button:hover{
     cursor: pointer;
+}
+
+.language-button:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+.tooltip-language-img{
+    width: 50px;
+    height: 30px;
 }
 .language-ru{
 
