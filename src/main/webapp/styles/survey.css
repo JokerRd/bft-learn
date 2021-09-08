@@ -13,3 +13,16 @@
 .question-header {
     font-size: 30px;
 }
+.question-grid {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.checkbox-point {
+    display: flex;
+    align-items: center;
+}
+.checkbox-img {
+    display: flex;
+    justify-content: center;
+}

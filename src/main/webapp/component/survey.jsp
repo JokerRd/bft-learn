@@ -45,15 +45,29 @@
             <p class="question-description">
                 Какой фреймворк для <a href="https://learn.javascript.ru/">Javascript</a> вы предпочитаете?
             </p>
-            <input type="checkbox" id="answer-1" name="framework">
-            <label for="answer-1">React</label>
-            <img src="<c:url value="component/img/react.png"/>" alt="React" height="200" width="300"><br>
-            <input type="checkbox" id="answer-2" name="framework">
-            <label for="answer-2">Angular</label>
-            <img src="<c:url value="component/img/angular.png"/>" alt="Angular" height="200" width="200"><br>
-            <input type="checkbox" id="answer-3" name="framework">
-            <label for="answer-3">Vue</label>
-            <img src="<c:url value="component/img/vue.png"/>" alt="Vue" height="200" width="200">
+            <div class="question-grid">
+                <div class="checkbox-point">
+                    <input type="checkbox" id="answer-1" name="framework">
+                    <label for="answer-1">React</label>
+                </div>
+                <div class="checkbox-img">
+                    <img src="<c:url value="component/img/react.png"/>" alt="React" height="200" width="300">
+                </div>
+                <div class="checkbox-point">
+                    <input type="checkbox" id="answer-2" name="framework">
+                    <label for="answer-2">Angular</label>
+                </div>
+                <div class="checkbox-img">
+                    <img src="<c:url value="component/img/angular.png"/>" alt="Angular" height="200" width="200">
+                </div>
+                <div class="checkbox-point">
+                    <input type="checkbox" id="answer-3" name="framework">
+                    <label for="answer-3">Vue</label>
+                </div>
+                <div class="checkbox-img">
+                    <img src="<c:url value="component/img/vue.png"/>" alt="Vue" height="200" width="200">
+                </div>
+            </div>
         </div>
         <input type="submit">
     </form>
