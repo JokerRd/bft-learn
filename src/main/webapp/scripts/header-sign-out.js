@@ -16,7 +16,7 @@ const signOutAction = () => {
 }
 
 const isConfirmSignOut = () => {
-    const messageConfirm = "Вы уверены, что хотите выйти";
+    const messageConfirm = "Вы уверены, что хотите выйти?";
     return confirm(messageConfirm);
 }
 

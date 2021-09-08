@@ -15,11 +15,14 @@
 }
 .footer-additional {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: #616161;
+    color: azure;
+    font-size: 18px;
+}
+.language {
+    margin-left: 10px;
 }
 .time {
     margin-right: 10px;
-    color: azure;
-    font-size: 16px;
 }
