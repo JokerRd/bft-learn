@@ -1,7 +1,3 @@
-window.onload = () => {
-    setActionOpenOnButton();
-}
-
 
 const setActionOpenOnButton = () => {
     const nameClassButtonOpen = '.sidebar-button';
@@ -97,3 +93,4 @@ const addClassForElement = (element, addClassStyle) => {
     element.classList.add(addClassStyle);
 }
 
+document.addEventListener("DOMContentLoaded", setActionOpenOnButton)
