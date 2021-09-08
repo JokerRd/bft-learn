@@ -27,7 +27,7 @@
     </aside>
 </div>
 <div class="sidebar-button-open-container-absolute">
-    <button class="sidebar-button sidebar-button-open">Открыть</button>
+    <button id="sidebar-button-slide-left" class="sidebar-button sidebar-button-open">Открыть</button>
 </div>
 </body>
 </html>

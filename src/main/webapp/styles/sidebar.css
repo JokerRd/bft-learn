@@ -2,8 +2,7 @@
     position: absolute;
     top: var(--header-size);
     bottom: 0;
-    visibility: visible;
-    border: solid;
+    visibility: hidden;
 }
 #sidebar-slide-left {
     transition-property: left;
@@ -45,7 +44,6 @@
 .sidebar-button-open-container-absolute {
     top: 0;
     position: absolute;
-    border: solid;
     bottom: 0;
 }
 
@@ -54,6 +52,21 @@
     position: sticky;
     top: calc(50vh - (var(--height-button) / 2));
 }
+
+#sidebar-button-slide-left{
+    left: 0;
+    transition-property: left;
+    transition-duration: 2s;
+}
+
+#sidebar-button-slide-left.sidebar-button-hidden{
+    left: -100px;
+}
+
+#sidebar-button-slide-left.sidebar-button-show{
+    left: 0;
+}
+
 .sidebar-button-close {
     position: sticky;
     right: 0;

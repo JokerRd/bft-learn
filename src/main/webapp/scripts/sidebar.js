@@ -18,19 +18,22 @@ const nameClassSidebarOpen = "sidebar-open";
 const nameClassSidebarClose = "sidebar-close";
 
 const setCloseStyle = () => {
-    setStyle(nameClassSidebarOpen, nameClassSidebarClose)
+    setStyleSidebar(nameClassSidebarOpen, nameClassSidebarClose)
 }
 
 const setOpenStyle = () => {
-    setStyle(nameClassSidebarClose, nameClassSidebarOpen)
+    setStyleSidebar(nameClassSidebarClose, nameClassSidebarOpen)
 }
 
-const setStyle = (removeClassStyle, addClassStyle) => {
+const setStyleSidebar = (removeClassStyle, addClassStyle) => {
     const nameClassSidebar = '.sidebar-container-absolute';
-    let sidebar = document.querySelector(nameClassSidebar);
-    console.log(sidebar)
-    sidebar.classList.remove(removeClassStyle)
-    sidebar.classList.add(addClassStyle)
+    setStyle(nameClassSidebar, removeClassStyle, addClassStyle);
+}
+
+const setStyle = (nameClassElement, removeClassStyle, addClassStyle) => {
+    let element = document.querySelector(nameClassElement);
+    element.classList.remove(removeClassStyle);
+    element.classList.add(addClassStyle);
 }
 
 window.onload = () => {
