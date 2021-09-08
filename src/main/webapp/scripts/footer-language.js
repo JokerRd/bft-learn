@@ -10,6 +10,7 @@ const setActiveLanguage = (currentLanguage) => {
     let activeLanguage = document.querySelector('.language-active');
     activeLanguage.classList.remove('language-active');
     currentLanguage.classList.add('language-active');
+    alert("Язык был изменен")
 }
 
 
