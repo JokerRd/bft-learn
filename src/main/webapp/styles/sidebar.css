@@ -6,7 +6,7 @@
 }
 #sidebar-slide-left {
     transition-property: left;
-    transition-duration: 2s;
+    transition-duration: 1s;
     left: -300px;
 }
 #sidebar-slide-left.sidebar-close {
@@ -65,7 +65,7 @@
     padding: 0;
 }
 #sidebar-button-rotate{
-    transition: 2s transform;
+    transition: 1s transform;
 }
 #sidebar-button-rotate.sidebar-button-open {
     transform: rotate(180deg);

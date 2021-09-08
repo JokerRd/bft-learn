@@ -16,7 +16,7 @@ const setActionOnButton = (nameClassButton, actionOnButton) => {
 
 const setActionOpenAndCloseOnButton = () => {
     const nameClassButtonSidebar = '.sidebar-button';
-    const nameClassButtonOpen = '.sidebar-button-open';
+    const nameClassButtonOpen = 'sidebar-button-open';
     const nameClassButtonClose = 'sidebar-button-close';
     let button = document.querySelector(nameClassButtonSidebar);
     if (containsDefaultButtonClass(button)) {
