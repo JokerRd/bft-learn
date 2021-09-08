@@ -1,6 +1,8 @@
 html {
     box-sizing: border-box;
     --header-size: 200px;
+    --width-sidebar: 15vw;
+    --width-survey-main: 85vw;
 }
 
 *, *::before, *::after {
@@ -21,4 +23,16 @@ html {
     justify-content: center;
 }
 
+#margin-from-sidebar {
+    margin-left: 0;
+    transition-property: margin-left;
+    transition-duration: 1s
+}
 
+#margin-from-sidebar.margin-from-sidebar-on{
+    margin-left: calc((var(--width-sidebar) - ((100vw - var(--width-survey-main)) / 2)) * 2);
+}
+
+#margin-from-sidebar.margin-from-sidebar-off{
+    margin-left: 0;
+}

@@ -18,11 +18,10 @@
 }
 
 .sidebar-var-width {
-    --width-sidebar: 15vw;
 }
 .sidebar {
     border: solid;
-    width: 15vw;
+    width: var(--width-sidebar);
     min-width: 100px;
     font-size: 20px;
     height: 400px;

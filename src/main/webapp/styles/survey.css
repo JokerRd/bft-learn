@@ -1,6 +1,6 @@
 .main {
     border: solid;
-    width: 85vw;
+    width: var(--width-survey-main);
     padding: 5%;
 }
 .question {

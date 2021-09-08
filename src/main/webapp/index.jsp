@@ -22,7 +22,7 @@
 <body class="background relative">
 <jsp:include page="component/header.jsp"/>
 <jsp:include page="component/sidebar.jsp"/>
-<div class="flex-container">
+<div id="margin-from-sidebar" class="flex-container margin-from-sidebar-off">
     <jsp:include page="component/survey.jsp"/>
 </div>
 <jsp:include page="component/footer.jsp"/>

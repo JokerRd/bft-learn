@@ -23,10 +23,12 @@ const setActionOpenAndCloseOnButton = () => {
         setOpenSidebar();
         removeClassForElement(button,nameClassButtonOpen);
         addClassForElement(button, nameClassButtonClose);
+        addMarginFromSidebar();
     } else {
         setCloseSidebar();
         removeClassForElement(button, nameClassButtonClose);
-        addClassForElement(button, nameClassButtonOpen)
+        addClassForElement(button, nameClassButtonOpen);
+        removeMarginFromSidebar();
     }
 }
 
@@ -35,7 +37,22 @@ const containsDefaultButtonClass = (button) => {
     return button.classList.contains(nameClassButtonDefault)
 }
 
+const nameClassMarginOn = 'margin-from-sidebar-on';
+const nameClassMarginOff = 'margin-from-sidebar-off';
 
+const addMarginFromSidebar = () => {
+    const nameClassSurvey = '.flex-container';
+    let survey = document.querySelector(nameClassSurvey);
+    removeClassForElement(survey,nameClassMarginOff);
+    addClassForElement(survey, nameClassMarginOn);
+}
+
+const removeMarginFromSidebar = () => {
+    const nameClassSurvey = '.flex-container';
+    let survey = document.querySelector(nameClassSurvey);
+    removeClassForElement(survey, nameClassMarginOn);
+    addClassForElement(survey, nameClassMarginOff);
+}
 
 const setCloseButton = () => {
 
