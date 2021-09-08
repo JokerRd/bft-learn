@@ -23,6 +23,21 @@
 .language {
     margin-left: 10px;
 }
+.language-active{
+    background-color: #303030;
+}
+.language-button{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.language-button:hover{
+    cursor: pointer;
+}
+.language-ru{
+
+}
+
+
 .time {
     margin-right: 10px;
 }

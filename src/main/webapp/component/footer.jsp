@@ -27,7 +27,9 @@
         </div>
     </div>
     <div class="footer-additional">
-        <div class="language">Смена языка: <span>ru</span> / <span>en</span></div>
+        <div class="language">
+            Смена языка: <span class="language-button language-ru language-active">ru</span> / <span class="language-button language-en">en</span>
+        </div>
         <time class="time"></time>
     </div>
 </footer>
