@@ -51,6 +51,18 @@
     visibility: visible;
     position: sticky;
     top: calc(50vh - (var(--height-button) / 2));
+    width: 50px;
+    height: 50px;
+}
+
+.reset-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
 }
 
 #sidebar-button-slide-left{
@@ -72,4 +84,9 @@
     right: 0;
     left: 100%;
     top: calc(50% - (var(--height-button) / 2));
+}
+
+.sidebar-button-background {
+    width: 50px;
+    height: 50px;
 }

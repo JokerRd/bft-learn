@@ -27,7 +27,9 @@
     </aside>
 </div>
 <div class="sidebar-button-open-container-absolute">
-    <button id="sidebar-button-slide-left" class="sidebar-button sidebar-button-open">Открыть</button>
+    <button id="sidebar-button-slide-left" class="sidebar-button reset-button sidebar-button-open">
+        <img class="sidebar-button-background" src="<c:url value="component/img/arrow2.png"/>" alt="arrow">
+    </button>
 </div>
 </body>
 </html>
