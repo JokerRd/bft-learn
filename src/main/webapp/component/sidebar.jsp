@@ -21,13 +21,10 @@
                 CSS</a></li>
             <li><a href="https://learn.javascript.ru/">Уроки JavaScript</a></li>
         </ul>
-        <button class="sidebar-button sidebar-button-close">
-            Закрыть
-        </button>
     </aside>
 </div>
 <div class="sidebar-button-open-container-absolute">
-    <button id="sidebar-button-slide-left" class="sidebar-button reset-button sidebar-button-open">
+    <button id="sidebar-button-rotate" class="sidebar-button reset-button sidebar-button-open">
         <img class="sidebar-button-background" src="<c:url value="component/img/arrow2.png"/>" alt="arrow">
     </button>
 </div>

@@ -1,11 +1,11 @@
-const setActionCloseOnButton = () => {
-    const nameClassButtonClose = '.sidebar-button-close';
-    setActionOnButton(nameClassButtonClose, setCloseStyle);
+window.onload = () => {
+    setActionOpenOnButton();
 }
 
+
 const setActionOpenOnButton = () => {
-    const nameClassButtonOpen = '.sidebar-button-open';
-    setActionOnButton(nameClassButtonOpen, setOpenStyle);
+    const nameClassButtonOpen = '.sidebar-button';
+    setActionOnButton(nameClassButtonOpen, setActionOpenAndCloseOnButton);
 }
 
 const setActionOnButton = (nameClassButton, actionOnButton) => {
@@ -14,14 +14,45 @@ const setActionOnButton = (nameClassButton, actionOnButton) => {
     button.addEventListener(nameEventClick, actionOnButton)
 }
 
+const setActionOpenAndCloseOnButton = () => {
+    const nameClassButtonSidebar = '.sidebar-button';
+    const nameClassButtonOpen = '.sidebar-button-open';
+    const nameClassButtonClose = 'sidebar-button-close';
+    let button = document.querySelector(nameClassButtonSidebar);
+    if (containsDefaultButtonClass(button)) {
+        setOpenSidebar();
+        removeClassForElement(button,nameClassButtonOpen);
+        addClassForElement(button, nameClassButtonClose);
+    } else {
+        setCloseSidebar();
+        removeClassForElement(button, nameClassButtonClose);
+        addClassForElement(button, nameClassButtonOpen)
+    }
+}
+
+const containsDefaultButtonClass = (button) => {
+    const nameClassButtonDefault = 'sidebar-button-open';
+    return button.classList.contains(nameClassButtonDefault)
+}
+
+
+
+const setCloseButton = () => {
+
+}
+
+const setOpenButton = () => {
+
+}
+
 const nameClassSidebarOpen = "sidebar-open";
 const nameClassSidebarClose = "sidebar-close";
 
-const setCloseStyle = () => {
+const setCloseSidebar = () => {
     setStyleSidebar(nameClassSidebarOpen, nameClassSidebarClose)
 }
 
-const setOpenStyle = () => {
+const setOpenSidebar = () => {
     setStyleSidebar(nameClassSidebarClose, nameClassSidebarOpen)
 }
 
@@ -36,7 +67,16 @@ const setStyle = (nameClassElement, removeClassStyle, addClassStyle) => {
     element.classList.add(addClassStyle);
 }
 
-window.onload = () => {
-    setActionOpenOnButton();
-    setActionCloseOnButton();
+const removeAndAddClassForElement = (element, removeClassStyle, addClassStyle) => {
+    element.classList.remove(removeClassStyle);
+    element.classList.add(addClassStyle);
 }
+
+const removeClassForElement = (element, removeClassStyle) => {
+    element.classList.remove(removeClassStyle);
+}
+
+const addClassForElement = (element, addClassStyle) => {
+    element.classList.add(addClassStyle);
+}
+

@@ -7,7 +7,7 @@
 #sidebar-slide-left {
     transition-property: left;
     transition-duration: 2s;
-    left: 0;
+    left: -300px;
 }
 #sidebar-slide-left.sidebar-close {
     left: -300px;
@@ -64,19 +64,14 @@
     background: transparent;
     padding: 0;
 }
-
-#sidebar-button-slide-left{
-    left: 0;
-    transition-property: left;
-    transition-duration: 2s;
+#sidebar-button-rotate{
+    transition: 2s transform;
 }
-
-#sidebar-button-slide-left.sidebar-button-hidden{
-    left: -100px;
+#sidebar-button-rotate.sidebar-button-open {
+    transform: rotate(180deg);
 }
-
-#sidebar-button-slide-left.sidebar-button-show{
-    left: 0;
+#sidebar-button-rotate.sidebar-button-close {
+    transform: rotate(0deg);
 }
 
 .sidebar-button-close {
@@ -84,6 +79,7 @@
     right: 0;
     left: 100%;
     top: calc(50% - (var(--height-button) / 2));
+    transform: rotate(180deg);
 }
 
 .sidebar-button-background {
