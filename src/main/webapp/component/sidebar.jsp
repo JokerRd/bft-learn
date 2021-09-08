@@ -24,8 +24,10 @@
         <button class="sidebar-button sidebar-button-close">
             Закрыть
         </button>
-        <button class="sidebar-button sidebar-button-open">Открыть</button>
     </aside>
+</div>
+<div class="sidebar-button-open-container-absolute">
+    <button class="sidebar-button sidebar-button-open">Открыть</button>
 </div>
 </body>
 </html>
