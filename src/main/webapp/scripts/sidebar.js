@@ -14,8 +14,8 @@ const setActionOnButton = (nameClassButton, actionOnButton) => {
     button.addEventListener(nameEventClick, actionOnButton)
 }
 
-const nameClassSidebarOpen = ".sidebar-open";
-const nameClassSidebarClose = ".sidebar-close";
+const nameClassSidebarOpen = "sidebar-open";
+const nameClassSidebarClose = "sidebar-close";
 
 const setCloseStyle = () => {
     setStyle(nameClassSidebarOpen, nameClassSidebarClose)
@@ -26,7 +26,7 @@ const setOpenStyle = () => {
 }
 
 const setStyle = (removeClassStyle, addClassStyle) => {
-    const nameClassSidebar = '.sidebar';
+    const nameClassSidebar = '.sidebar-container-absolute';
     let sidebar = document.querySelector(nameClassSidebar);
     console.log(sidebar)
     sidebar.classList.remove(removeClassStyle)

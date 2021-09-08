@@ -12,7 +12,7 @@
     <title></title>
 </head>
 <body>
-<div class="absolute">
+<div id="sidebar-slide-left" class="sidebar-container-absolute">
     <aside class="sidebar">
         <button class="sidebar-button sidebar-button-close">
             Закрыть

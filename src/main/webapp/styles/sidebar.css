@@ -1,8 +1,20 @@
-.absolute {
+.sidebar-container-absolute {
     position: absolute;
     top: var(--header-size);
     bottom: 0;
     visibility: hidden;
+}
+#sidebar-slide-left {
+    transition-property: left;
+    transition-duration: 2s;
+    left: 0;
+}
+#sidebar-slide-left.sidebar-close {
+    left: -500px;
+}
+
+.sidebar-var-width {
+    --width-sidebar: 15vw;
 }
 .sidebar {
     border: solid;
@@ -15,11 +27,8 @@
     visibility: visible;
     background: white;
 }
-.sidebar-close {
-    left: -100%;
-    transition-property: left;
-    transition-duration: 1s;
-}
+
+
 .sidebar-open {
     left: 0;
 }
