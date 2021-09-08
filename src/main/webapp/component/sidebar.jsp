@@ -14,10 +14,6 @@
 <body>
 <div id="sidebar-slide-left" class="sidebar-container-absolute">
     <aside class="sidebar">
-        <button class="sidebar-button sidebar-button-close">
-            Закрыть
-        </button>
-        <button class="sidebar-button sidebar-button-open">Открыть</button>
         <p class="sidebar-header"> Полезные ссылки</p>
         <ul class="list">
             <li><a href="http://htmlbook.ru/">Htmlbook</a></li>
@@ -25,6 +21,10 @@
                 CSS</a></li>
             <li><a href="https://learn.javascript.ru/">Уроки JavaScript</a></li>
         </ul>
+        <button class="sidebar-button sidebar-button-close">
+            Закрыть
+        </button>
+        <button class="sidebar-button sidebar-button-open">Открыть</button>
     </aside>
 </div>
 </body>

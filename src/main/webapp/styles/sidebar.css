@@ -38,10 +38,15 @@
 .sidebar-button {
     min-width: 50px;
     cursor: pointer;
+    --height-button: 40px;
+    height: var(--height-button);
 }
 .sidebar-button-open {
-
+    visibility: hidden;
 }
 .sidebar-button-close {
-
+    position: sticky;
+    right: 0;
+    left: 100%;
+    top: calc(50% - (var(--height-button) / 2));
 }
