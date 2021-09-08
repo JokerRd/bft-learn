@@ -23,7 +23,9 @@
             Прошу вас отнестись к опросу серьезно и отвечать <strong>правдиво</strong>.
         </p>
     </div>
-    <div class="aligner"></div>
+    <div class="aligner">
+        <p class="sign-out sign-out-font">Выйти</p>
+    </div>
 </header>
 </body>
 </html>
