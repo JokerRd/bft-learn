@@ -10,7 +10,7 @@ Ext.define('Constructor.views.ConstructorTest', {
     margin: '5 5 5 5',
     layout: 'border',
     items: [
-        Ext.create('config-sidebar')
+        Ext.create('Constructor.views.ConfigurationSideBar')
     ]
 });
 

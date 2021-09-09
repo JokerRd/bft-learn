@@ -1,6 +1,6 @@
 
 Ext.define("Constructor.views.ConfigurationSideBar", {
-    extend: Ext.tab.Panel,
+    extend: 'Ext.tab.Panel',
     alias: "config-sidebar",
     title: "Настройки теста",
     width: '30%',
