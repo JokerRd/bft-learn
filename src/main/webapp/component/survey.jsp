@@ -19,7 +19,7 @@
             <p class="question-description">
                 Напишите ваше имя.
             </p>
-            <input class="question-input" name="name">
+            <input placeholder="Имя" class="question-input" name="name">
         </div>
         <div class="question">
             <div class="question-header">2 вопрос</div>
