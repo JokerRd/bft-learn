@@ -26,7 +26,7 @@
             <p class="question-description">
                 Сколько вам лет?
             </p>
-            <input class="question-number" name="age" type="number" min="4" max="100">
+            <input placeholder="Возраст" class="question-number" name="age" type="number" min="4" max="100">
         </div>
         <div class="question">
             <div class="question-header">3 вопрос</div>

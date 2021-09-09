@@ -20,7 +20,6 @@
     border: 2px solid #929090;
     background: #F6F6f6;
     border-radius: 8px;
-
 }
 .question-input:focus{
     outline: none;
@@ -30,6 +29,24 @@
     outline: none;
     border-color: #333;
 }
+
+.question-number{
+    width: 300px;
+    font-size: 16px;
+    padding: 6px 6px 4px 10px;
+    border: 2px solid #929090;
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+.question-number:focus{
+    outline: none;
+    border-color: #333;
+}
+.question-number:active{
+    outline: none;
+    border-color: #333;
+}
+
 .question-grid {
     display: grid;
     grid-template-columns: 100px 300px;
