@@ -24,9 +24,10 @@
     width: var(--width-sidebar);
     min-width: 100px;
     font-size: 20px;
-    height: 400px;
+    --height-sidebar: 500px;
+    height: var(--height-sidebar);
     position: sticky;
-    top: calc(50vh - 200px);
+    top: calc(50vh - (var(--height-sidebar) / 2));
     visibility: visible;
     background: white;
 }
