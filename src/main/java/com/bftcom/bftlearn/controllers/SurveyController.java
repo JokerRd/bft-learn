@@ -12,4 +12,9 @@ public class SurveyController {
         return "index";
     }
 
+    @GetMapping(value = "/constructor")
+    public String viewConstructor() {
+        return "constructor";
+    }
+
 }
