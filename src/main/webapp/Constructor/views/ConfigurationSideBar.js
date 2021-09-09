@@ -8,12 +8,11 @@ Ext.define("Constructor.views.ConfigurationSideBar", {
     region: 'west',
     layout: {
         type: 'vbox',
-        align: 'stretch'
+        align: 'stretch',
+
     },
+
     items: [
-        Ext.create('Ext.tab.Panel', {
-            title: 'Настройка 1',
-        }),
         Ext.create('Ext.tab.Panel', {
             title: 'Настройка 1',
         }),
