@@ -13,11 +13,19 @@
     <script type="text/javascript" src="scripts/ext-js/js/ext-all.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all-debug.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-locale-ru.js"></script>
-    <script type="text/javascript" src="scripts/app/app.js"></script>
-    <script type="text/javascript" src="scripts/app/Application.js"></script>
-    <script type="text/javascript" src="scripts/app/views/Main.js"></script>
+    <script type="application/javascript">
+        Ext.application({
+            name: 'More',
+            extend: 'Ext.app.Application',
+            launch: function(){
+                Ext.create('Constructor.views.Main',{
+                    renderTo: 'body'
+                });
+            }
+        });
+    </script>
     <title>Конструктор опросов</title>
 </head>
-<body>
+<body id="body">
 </body>
 </html>

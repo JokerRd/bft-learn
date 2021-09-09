@@ -3,7 +3,8 @@ Ext.define('Constructor.Application', {
     mainView: 'Constructor.views.Main',
     launch: function () {
         Ext.create({
-            xtype: 'main'
+            xtype: 'main',
         });
     }
 });
+
