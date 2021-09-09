@@ -18,6 +18,6 @@
     <script type="text/javascript" src="scripts/app/views/Main.js"></script>
     <title>Конструктор опросов</title>
 </head>
-<body id="body">
+<body>
 </body>
 </html>
