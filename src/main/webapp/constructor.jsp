@@ -9,13 +9,15 @@
 <html>
 <head>
     <meta charset="UTF-8" name="Vlad" content="Простой опросник">
+    <link rel="stylesheet" href="scripts/ext-js/themes/theme-neptune/resources/theme-neptune-all.css"/>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all-debug.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-locale-ru.js"></script>
-    <script type="text/javascript" src="scripts/constructor/constructor.js"></script>
+    <script type="text/javascript" src="scripts/app/app.js"></script>
+    <script type="text/javascript" src="scripts/app/Application.js"></script>
+    <script type="text/javascript" src="scripts/app/views/Main.js"></script>
     <title>Конструктор опросов</title>
 </head>
-<body>
-
+<body id="body">
 </body>
 </html>
