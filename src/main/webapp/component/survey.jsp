@@ -19,14 +19,14 @@
             <p class="question-description">
                 Напишите ваше имя.
             </p>
-            <input placeholder="Имя" class="question-input" name="name">
+            <input placeholder="Имя" class="question-input question-item" name="name">
         </div>
         <div class="question">
             <div class="question-header">2 вопрос</div>
             <p class="question-description">
                 Сколько вам лет?
             </p>
-            <input placeholder="Возраст" class="question-number" name="age" type="number" min="4" max="100">
+            <input placeholder="Возраст" class="question-number question-item" name="age" type="number" min="4" max="100">
         </div>
         <div class="question">
             <div class="question-header">3 вопрос</div>
