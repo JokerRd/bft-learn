@@ -69,7 +69,7 @@
                 </div>
             </div>
         </div>
-        <input type="submit">
+        <input class="question-submit" type="submit">
     </form>
 </div>
 </body>

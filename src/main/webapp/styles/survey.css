@@ -46,6 +46,28 @@
 .question-select{
 
 }
+.question-submit{
+    width: 200px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #4676d7;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+    transition-property: background-color, border, color;
+    transition-duration: 0.4s;
+}
+.question-submit:hover {
+    background-color: #ffffff;
+    border: 2px solid #555555;
+    color: black;
+}
+
+.question-submit:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
 
 .question-grid {
     display: grid;
