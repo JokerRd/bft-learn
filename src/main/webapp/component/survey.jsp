@@ -31,7 +31,7 @@
         <div class="question">
             <div class="question-header">3 вопрос</div>
             <p class="question-description">В каком регионе проживаете?</p>
-            <select class="question-select" name="region">
+            <select class="question-select question-item" name="region">
                 <option>Урал</option>
                 <option>Сибирь</option>
                 <option>Поволжье</option>

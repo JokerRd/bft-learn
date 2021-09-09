@@ -20,6 +20,8 @@
     border: 2px solid #929090;
     background: #F6F6f6;
     border-radius: 8px;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
 }
 .question-item:focus{
     outline: none;
@@ -42,11 +44,7 @@
 }
 
 .question-select{
-    width: 300px;
-    padding: 6px 6px 4px 10px;
-    border: 2px solid #929090;
-    background: #F6F6f6;
-    border-radius: 8px;
+
 }
 
 .question-grid {
