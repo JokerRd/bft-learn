@@ -2,6 +2,10 @@
 Ext.define("Constructor.views.ConfigurationSideBar", {
     extend: 'Ext.tab.Panel',
     alias: "config-sidebar",
+    requires: [
+        'Constructor.views.ConfigurationPanel',
+        'Constructor.views.ConfigurationFormPanel'
+    ],
     title: "Настройки теста",
     width: '30%',
     height: '100%',
@@ -13,11 +17,14 @@ Ext.define("Constructor.views.ConfigurationSideBar", {
     },
 
     items: [
-        Ext.create('Ext.tab.Panel', {
+        {
+            xtype: 'config-panel',
             title: 'Настройка 1',
-        }),
-        Ext.create('Ext.tab.Panel', {
-            title: 'Настройка 1',
-        })
+            items: [
+                {
+                    xtype: 'config-from'
+                }
+            ]
+        }
     ]
 })

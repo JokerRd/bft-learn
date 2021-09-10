@@ -6,8 +6,8 @@ Ext.define("Constructor.views.ConfigurationQuestionPanel", {
     height: '100%',
     region: 'east',
     columns: [
-        { text: 'Name', dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email' },
-        { text: 'Phone', dataIndex: 'phone' }
+        { text: 'Название вопроса', dataIndex: 'name' },
+        { text: 'Тип вопроса', dataIndex: 'name' },
+        { text: 'Описание вопроса', dataIndex: 'name' }
     ]
 })
