@@ -1,5 +1,7 @@
 Ext.define('Constructor.views.AddQuestionButton', {
-    extend: 'Ext.button.Button',
+    extend: 'Ext.Button',
     alias: 'widget.add-question-btn',
-    title: 'Добавить вопрос'
+    text: 'Добавить вопрос',
+    margin: '5 5 5 5',
+    height: 50
 })

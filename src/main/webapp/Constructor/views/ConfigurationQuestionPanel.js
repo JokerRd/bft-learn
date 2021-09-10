@@ -1,13 +1,17 @@
 Ext.define("Constructor.views.ConfigurationQuestionPanel", {
-    extend: 'Ext.grid.Panel',
-    alias: 'widget.question-grid',
+    extend: 'Ext.panel.Panel',
+    alias: 'widget.question',
+    requires: [
+        'Constructor.views.AddQuestionButton'
+    ],
     title: 'Вопросы',
     width: '70%',
     height: '100%',
     region: 'east',
-    columns: [
-        { text: 'Название вопроса', dataIndex: 'name' },
-        { text: 'Тип вопроса', dataIndex: 'name' },
-        { text: 'Описание вопроса', dataIndex: 'name' }
+    layout: 'column',
+    items: [
+        {
+            xtype: 'add-question-btn'
+        }
     ]
 })
