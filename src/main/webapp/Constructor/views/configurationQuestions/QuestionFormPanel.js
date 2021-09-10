@@ -3,11 +3,13 @@ Ext.define('Constructor.views.configurationQuestions.QuestionFormPanel', {
     alias: 'widget.question',
     requires: [
         'Constructor.views.configurationQuestions.TypeQuestionComboBox',
-        'Constructor.views.configurationQuestions.AnswersFormPanel'
+        'Constructor.views.configurationQuestions.AnswersFormPanel',
+        'Constructor.controllers.configurationQuestions.QuestionFormController'
     ],
     title: 'Вопрос',
     width: '100%',
     bodyPadding: 15,
+    controller: 'question-form-control',
     items: [
         {
             xtype: 'textfield',
