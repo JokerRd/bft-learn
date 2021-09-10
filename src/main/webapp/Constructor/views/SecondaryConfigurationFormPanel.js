@@ -8,11 +8,6 @@ Ext.define('Constructor.views.SecondaryConfigurationFormPanel', {
             xtype: 'checkboxfield',
             fieldLabel: 'Показывать результаты теста?',
             name: 'nameTest'
-        },
-        {
-            xtype: 'textareafield',
-            fieldLabel: 'Описание теста',
-            name: 'descriptionTest'
         }
     ]
 })

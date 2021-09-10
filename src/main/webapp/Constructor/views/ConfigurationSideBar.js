@@ -1,7 +1,7 @@
 
 Ext.define("Constructor.views.ConfigurationSideBar", {
     extend: 'Ext.tab.Panel',
-    alias: "config-sidebar",
+    alias: "widget.config-sidebar",
     requires: [
         'Constructor.views.PrimaryConfigurationFormPanel',
         'Constructor.views.SecondaryConfigurationFormPanel'

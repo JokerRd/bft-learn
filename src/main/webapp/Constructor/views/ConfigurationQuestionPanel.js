@@ -1,6 +1,6 @@
 Ext.define("Constructor.views.ConfigurationQuestionPanel", {
     extend: 'Ext.grid.Panel',
-    alias: 'question-grid',
+    alias: 'widget.question-grid',
     title: 'Вопросы',
     width: '70%',
     height: '100%',

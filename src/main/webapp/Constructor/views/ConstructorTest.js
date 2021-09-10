@@ -11,8 +11,12 @@ Ext.define('Constructor.views.ConstructorTest', {
     margin: '5 5 5 5',
     layout: 'border',
     items: [
-        Ext.create('Constructor.views.ConfigurationSideBar'),
-        Ext.create('Constructor.views.ConfigurationQuestionPanel')
+        {
+            xtype: 'config-sidebar'
+        },
+        {
+            xtype: 'question-grid'
+        }
     ]
 });
 
