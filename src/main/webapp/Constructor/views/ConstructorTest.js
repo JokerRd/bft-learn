@@ -15,7 +15,7 @@ Ext.define('Constructor.views.ConstructorTest', {
             xtype: 'config-sidebar'
         },
         {
-            xtype: 'question'
+            xtype: 'config-question'
         }
     ]
 });
