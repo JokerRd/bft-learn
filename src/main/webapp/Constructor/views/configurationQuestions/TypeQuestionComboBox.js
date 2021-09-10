@@ -13,7 +13,9 @@ Ext.define('Constructor.views.configurationQuestions.TypeQuestionComboBox', {
     fieldLabel: 'Тип вопроса',
     name: 'typeQuestion',
     store: state,
+    forceSelection: true,
     displayField: 'typeQuestion',
     valueField: 'typeQuestion',
-    queryMode: 'local'
+    queryMode: 'local',
+    value: 'С вводимым ответом'
 })
