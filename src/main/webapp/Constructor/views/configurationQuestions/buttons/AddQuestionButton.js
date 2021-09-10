@@ -1,4 +1,4 @@
-Ext.define('Constructor.views.configurationQuestions.AddQuestionButton', {
+Ext.define('Constructor.views.configurationQuestions.buttons.AddQuestionButton', {
     extend: 'Ext.Button',
     alias: 'widget.add-question-btn',
     text: 'Добавить вопрос',

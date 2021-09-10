@@ -2,7 +2,7 @@ Ext.define('Constructor.views.configurationQuestions.AnswersFormPanel', {
     extend: 'Ext.form.Panel',
     alias: 'widget.answers-panel',
     requires: [
-      'Constructor.views.configurationQuestions.AddAnswerButton'
+      'Constructor.views.configurationQuestions.buttons.AddAnswerButton'
     ],
     title: "Варианты ответов",
     bodyPadding: 15,
