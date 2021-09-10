@@ -3,8 +3,11 @@ Ext.define("Constructor.views.configurationQuestions.ConfigurationQuestionPanel"
     alias: 'widget.config-question',
     requires: [
         'Constructor.views.configurationQuestions.buttons.AddQuestionButton',
-        'Constructor.views.configurationQuestions.QuestionFormPanel'
+        'Constructor.views.configurationQuestions.QuestionFormPanel',
+        'Constructor.views.configurationQuestions.QuestionsPanel',
+        'Constructor.controllers.configurationQuestions.ConfigurationQuestionsController',
     ],
+    controller: 'config-questions-control',
     title: 'Вопросы',
     width: '70%',
     height: '100%',
@@ -13,7 +16,7 @@ Ext.define("Constructor.views.configurationQuestions.ConfigurationQuestionPanel"
     bodyPadding: 10,
     items: [
         {
-            xtype: 'question'
+            xtype: 'questions'
         },
         {
             xtype: 'add-question-btn'
