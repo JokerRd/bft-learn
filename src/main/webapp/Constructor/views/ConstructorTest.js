@@ -3,7 +3,8 @@ Ext.define('Constructor.views.ConstructorTest', {
     alias: 'constructor-test',
     requires: [
         'Constructor.views.ConfigurationSideBar',
-        'Constructor.views.ConfigurationQuestionPanel'
+        'Constructor.views.ConfigurationQuestionPanel',
+        'Constructor.views.AddQuestionButton'
     ],
     title: 'Создание теста',
     width: '70%',
@@ -16,6 +17,9 @@ Ext.define('Constructor.views.ConstructorTest', {
         },
         {
             xtype: 'question-grid'
+        },
+        {
+            xtype: 'add-question-btn'
         }
     ]
 });

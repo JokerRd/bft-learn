@@ -6,7 +6,7 @@ Ext.define('Constructor.views.SecondaryConfigurationFormPanel', {
     items: [
         {
             xtype: 'checkboxfield',
-            fieldLabel: 'Показывать результаты теста?',
+            fieldLabel: 'Показывать результаты?',
             name: 'nameTest'
         }
     ]
