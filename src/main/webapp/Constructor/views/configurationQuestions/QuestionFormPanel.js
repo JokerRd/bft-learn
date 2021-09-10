@@ -4,6 +4,7 @@ Ext.define('Constructor.views.configurationQuestions.QuestionFormPanel', {
     requires: [
         'Constructor.views.configurationQuestions.TypeQuestionComboBox',
         'Constructor.views.configurationQuestions.AnswersFormPanel',
+        'Constructor.views.configurationQuestions.buttons.DeleteQuestionButton',
         'Constructor.controllers.configurationQuestions.QuestionFormController'
     ],
     title: 'Вопрос',
@@ -26,6 +27,9 @@ Ext.define('Constructor.views.configurationQuestions.QuestionFormPanel', {
         },
         {
             xtype: 'answers-panel',
+        },
+        {
+            xtype: 'delete-question-btn'
         }
     ]
 })

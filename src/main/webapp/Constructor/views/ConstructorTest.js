@@ -6,7 +6,7 @@ Ext.define('Constructor.views.ConstructorTest', {
         'Constructor.views.configurationQuestions.ConfigurationQuestionPanel',
     ],
     title: 'Создание теста',
-    width: '70%',
+    width: '80%',
     height: '100%',
     margin: '5 5 5 5',
     layout: 'border',

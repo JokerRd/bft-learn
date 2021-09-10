@@ -7,7 +7,9 @@ Ext.define('Constructor.views.Main', {
     title: 'Конструктор опросов',
     width: '100%',
     height: '100%',
-    layout: 'center',
+    layout: {
+        type: 'center'
+    },
     items: [
         Ext.create('Constructor.views.ConstructorTest')
     ]
