@@ -1,10 +1,9 @@
-
-Ext.define("Constructor.views.ConfigurationSideBar", {
+Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
     extend: 'Ext.tab.Panel',
     alias: "widget.config-sidebar",
     requires: [
-        'Constructor.views.PrimaryConfigurationFormPanel',
-        'Constructor.views.SecondaryConfigurationFormPanel'
+        'Constructor.views.configurationTest.PrimaryConfigurationFormPanel',
+        'Constructor.views.configurationTest.SecondaryConfigurationFormPanel'
     ],
     title: "Настройки теста",
     width: '30%',

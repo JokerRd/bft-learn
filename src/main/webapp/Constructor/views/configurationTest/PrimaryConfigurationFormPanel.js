@@ -1,4 +1,4 @@
-Ext.define('Constructor.views.PrimaryConfigurationFormPanel', {
+Ext.define('Constructor.views.configurationTest.PrimaryConfigurationFormPanel', {
     extend: 'Ext.form.Panel',
     alias: 'widget.primary-config-form',
     title: "Основные настройки",

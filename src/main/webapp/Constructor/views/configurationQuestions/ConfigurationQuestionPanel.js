@@ -1,8 +1,8 @@
-Ext.define("Constructor.views.ConfigurationQuestionPanel", {
+Ext.define("Constructor.views.configurationQuestions.ConfigurationQuestionPanel", {
     extend: 'Ext.panel.Panel',
     alias: 'widget.question',
     requires: [
-        'Constructor.views.AddQuestionButton'
+        'Constructor.views.configurationQuestions.AddQuestionButton'
     ],
     title: 'Вопросы',
     width: '70%',
