@@ -3,7 +3,6 @@ Ext.define('Constructor.views.ConstructorTest', {
     alias: 'widget.constructor-test',
     requires: [
         'Constructor.views.configurationTest.ConfigurationTestSideBar',
-        'Constructor.views.configurationQuestions.ConfigurationQuestionPanel',
         'Constructor.views.editorQuestions.EditorQuestions'
     ],
     title: 'Создание теста',

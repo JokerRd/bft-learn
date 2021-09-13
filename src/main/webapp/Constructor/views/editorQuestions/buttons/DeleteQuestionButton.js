@@ -1,4 +1,4 @@
-Ext.define('Constructor.views.configurationQuestions.buttons.DeleteQuestionButton', {
+Ext.define('Constructor.views.editorQuestions.buttons.DeleteQuestionButton', {
     extend: 'Ext.Button',
     alias: 'widget.delete-question-btn',
     text: 'Удалить вопрос',

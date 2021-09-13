@@ -3,7 +3,8 @@ Ext.define('Constructor.views.editorQuestions.EditorQuestions', {
     alias: 'widget.editor-questions',
     requires: [
         'Constructor.views.editorQuestions.QuestionsGrid',
-        'Constructor.views.editorQuestions.EditorToolbar'
+        'Constructor.views.editorQuestions.EditorToolbar',
+        'Constructor.controllers.configurationQuestions.EditorQuestionsController'
     ],
     controller: 'editor-questions-controller',
     title: 'Редактирование вопросов',
