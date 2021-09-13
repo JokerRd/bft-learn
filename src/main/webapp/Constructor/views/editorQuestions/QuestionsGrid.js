@@ -5,6 +5,7 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     alias: 'widget.questions-grid',
     title: 'Вопросы',
     width: '100%',
+    height: 500,
     store: questionsGrid,
     columns: [
         {
