@@ -1,4 +1,4 @@
-Ext.define('Constructor.views.QuestionsWindow', {
+Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.question-window',
     requires: [

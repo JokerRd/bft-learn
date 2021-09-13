@@ -1,9 +1,9 @@
-Ext.define('Constructor.views.Questions', {
+Ext.define('Constructor.views.editorQuestions.EditorQuestions', {
     extend: 'Ext.panel.Panel',
-    alias: 'widget.questions-panel',
+    alias: 'widget.editor-questions',
     requires: [
-        'Constructor.views.QuestionsGrid',
-        'Constructor.views.QuestionsToolbar'
+        'Constructor.views.editorQuestions.QuestionsGrid',
+        'Constructor.views.editorQuestions.EditorToolbar'
     ],
     title: 'Редактирование вопросов',
     width: '70%',
@@ -11,7 +11,7 @@ Ext.define('Constructor.views.Questions', {
     region: 'east',
     items: [
         {
-            xtype: 'question-toolbar'
+            xtype: 'editor-toolbar'
         },
         {
             xtype: 'questions-grid'

@@ -1,6 +1,6 @@
 let questionsGrid = Ext.create('Constructor.stores.QuestionStore');
 
-Ext.define('Constructor.views.QuestionsGrid', {
+Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     extend: 'Ext.grid.Panel',
     alias: 'widget.questions-grid',
     title: 'Вопросы',

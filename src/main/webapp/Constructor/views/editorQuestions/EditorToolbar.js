@@ -1,6 +1,6 @@
-Ext.define('Constructor.views.QuestionsToolbar', {
+Ext.define('Constructor.views.editorQuestions.EditorToolbar', {
     extend: 'Ext.toolbar.Toolbar',
-    alias: 'widget.question-toolbar',
+    alias: 'widget.editor-toolbar',
     requires: [
         'Constructor.views.configurationQuestions.buttons.AddQuestionButton'
     ],

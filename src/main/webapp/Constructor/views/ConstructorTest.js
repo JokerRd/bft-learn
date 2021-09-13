@@ -4,7 +4,7 @@ Ext.define('Constructor.views.ConstructorTest', {
     requires: [
         'Constructor.views.configurationTest.ConfigurationTestSideBar',
         'Constructor.views.configurationQuestions.ConfigurationQuestionPanel',
-        'Constructor.views.Questions'
+        'Constructor.views.editorQuestions.EditorQuestions'
     ],
     title: 'Создание теста',
     width: '80%',
@@ -16,7 +16,7 @@ Ext.define('Constructor.views.ConstructorTest', {
             xtype: 'config-sidebar'
         },
         {
-            xtype: 'questions-panel'
+            xtype: 'editor-questions'
         }
     ]
 });
