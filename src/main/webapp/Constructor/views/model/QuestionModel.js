@@ -1,4 +1,4 @@
-Ext.define('QuestionModel', {
+Ext.define('Constructor.views.models.QuestionModel', {
     extend: 'Ext.data.Model',
     fields: [
         {
