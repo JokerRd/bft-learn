@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "questions": [
+    {
+      "id": 1,
+      "nameQuestion": "Крутой вопрос",
+      "descriptionQuestion": "Сколько будет 10000*10000000?",
+      "typeQuestion": "C вводимым ответом",
+      "answers": {
+      }
+    },
+    {
+      "id": 2,
+      "nameQuestion": "МегаКрутой вопрос",
+      "descriptionQuestion": "Столица Франции?",
+      "typeQuestion": "C выбором ответа",
+      "answers": [
+        {
+          "id": 1,
+          "answer": "Марсель",
+          "isRight": false
+        },
+        {
+          "id": 2,
+          "answer": "Париж",
+          "isRight": true
+        }
+      ]
+    }
+  ]
+}

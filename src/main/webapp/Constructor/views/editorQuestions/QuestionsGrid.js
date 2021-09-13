@@ -14,6 +14,16 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
         {
             header: 'Тип вопроса',
             dataIndex: 'typeQuestion'
+        },
+        {
+            xtype: 'actioncolumn',
+            width:40,
+            items:[{
+                icon:'del.png',
+                handler:function (grid, rowIndex, colIndex) {
+                    store.removeAt(rowIndex);
+                }
+            }]
         }
     ]
 })
