@@ -25,7 +25,8 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
             items: [{
                 icon: 'Constructor/resources/del.png',
                 handler: function (grid, rowIndex, colIndex) {
-                    store.removeAt(rowIndex);
+                    console.log(grid);
+                    questionsGrid.removeAt(rowIndex);
                 }
             }]
         }
