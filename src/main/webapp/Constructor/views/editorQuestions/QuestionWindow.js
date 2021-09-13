@@ -2,7 +2,7 @@ Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.question-window',
     requires: [
-        'Constructor.views.configurationQuestions.QuestionsPanel'
+        'Constructor.views.editorQuestions.configurationQuestions.QuestionsPanel'
     ],
     reference: 'question-window',
     height: 500,
@@ -13,4 +13,5 @@ Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
             xtype: 'questions'
         }
     ]
-})
+});
+

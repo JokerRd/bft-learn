@@ -4,7 +4,8 @@ Ext.define('Constructor.views.editorQuestions.EditorQuestions', {
     requires: [
         'Constructor.views.editorQuestions.QuestionsGrid',
         'Constructor.views.editorQuestions.EditorToolbar',
-        'Constructor.controllers.configurationQuestions.EditorQuestionsController'
+        'Constructor.controllers.configurationQuestions.EditorQuestionsController',
+        'Constructor.views.editorQuestions.QuestionWindow'
     ],
     controller: 'editor-questions-controller',
     title: 'Редактирование вопросов',
@@ -17,6 +18,9 @@ Ext.define('Constructor.views.editorQuestions.EditorQuestions', {
         },
         {
             xtype: 'questions-grid'
+        },
+        {
+            xtype: 'question-window'
         }
     ]
 })
