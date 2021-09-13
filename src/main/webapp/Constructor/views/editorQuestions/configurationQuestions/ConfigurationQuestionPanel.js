@@ -1,10 +1,8 @@
-Ext.define("Constructor.views.configurationQuestions.ConfigurationQuestionPanel", {
+Ext.define("Constructor.views.editorQuestions.configurationQuestions.ConfigurationQuestionPanel", {
     extend: 'Ext.panel.Panel',
     alias: 'widget.config-question',
     requires: [
-        'Constructor.views.configurationQuestions.buttons.AddQuestionButton',
-        'Constructor.views.configurationQuestions.QuestionFormPanel',
-        'Constructor.views.configurationQuestions.QuestionsPanel',
+        'Constructor.views.editorQuestions.configurationQuestions.QuestionsPanel',
         'Constructor.controllers.configurationQuestions.ConfigurationQuestionsController',
     ],
     controller: 'config-questions-control',
@@ -17,9 +15,6 @@ Ext.define("Constructor.views.configurationQuestions.ConfigurationQuestionPanel"
     items: [
         {
             xtype: 'questions'
-        },
-        {
-            xtype: 'add-question-btn'
         }
     ]
 })

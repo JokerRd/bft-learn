@@ -7,7 +7,7 @@ let state = Ext.create('Ext.data.Store', {
 })
 
 
-Ext.define('Constructor.views.configurationQuestions.TypeQuestionComboBox', {
+Ext.define('Constructor.views.editorQuestions.configurationQuestions.TypeQuestionComboBox', {
     extend: 'Ext.form.ComboBox',
     alias: 'widget.type-question',
     fieldLabel: 'Тип вопроса',

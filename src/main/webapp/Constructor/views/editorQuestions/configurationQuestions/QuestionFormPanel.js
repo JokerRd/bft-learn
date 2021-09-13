@@ -1,10 +1,10 @@
-Ext.define('Constructor.views.configurationQuestions.QuestionFormPanel', {
+Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionFormPanel', {
     extend: 'Ext.form.Panel',
     alias: 'widget.question',
     requires: [
-        'Constructor.views.configurationQuestions.TypeQuestionComboBox',
-        'Constructor.views.configurationQuestions.AnswersFormPanel',
-        'Constructor.views.configurationQuestions.buttons.DeleteQuestionButton',
+        'Constructor.views.editorQuestions.configurationQuestions.TypeQuestionComboBox',
+        'Constructor.views.editorQuestions.configurationQuestions.AnswersFormPanel',
+        'Constructor.views.editorQuestions.configurationQuestions.buttons.DeleteQuestionButton',
         'Constructor.controllers.configurationQuestions.QuestionFormController'
     ],
     title: 'Вопрос',

@@ -1,14 +1,11 @@
-Ext.define('Constructor.views.configurationQuestions.AnswersPanel', {
+Ext.define('Constructor.views.editorQuestions.configurationQuestions.AnswersPanel', {
     extend: 'Ext.form.Panel',
     alias: 'widget.answers',
     requires: [
-        'Constructor.views.configurationQuestions.buttons.AddAnswerButton'
+        'Constructor.views.editorQuestions.configurationQuestions.buttons.AddAnswerButton'
     ],
     reference: 'answers',
     bodyPadding: 15,
-    defaults: {
-        scrollable: true
-    },
     height: 200,
     items: [
         {
