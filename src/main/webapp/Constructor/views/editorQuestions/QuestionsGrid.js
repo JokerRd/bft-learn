@@ -9,6 +9,9 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     store: questionsGrid,
     columns: [
         {
+            xtype: 'rownumberer'
+        },
+        {
             header: 'Название вопроса',
             dataIndex: 'nameQuestion'
         },
@@ -18,10 +21,10 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
         },
         {
             xtype: 'actioncolumn',
-            width:40,
-            items:[{
-                icon:'del.png',
-                handler:function (grid, rowIndex, colIndex) {
+            width: 32,
+            items: [{
+                icon: 'Constructor/resources/del.png',
+                handler: function (grid, rowIndex, colIndex) {
                     store.removeAt(rowIndex);
                 }
             }]
