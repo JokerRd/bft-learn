@@ -4,6 +4,7 @@ Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
     requires: [
         'Constructor.views.configurationQuestions.QuestionsPanel'
     ],
+    reference: 'question-window',
     height: 500,
     width: 500,
     layout: 'fit',

@@ -5,6 +5,7 @@ Ext.define('Constructor.views.editorQuestions.EditorQuestions', {
         'Constructor.views.editorQuestions.QuestionsGrid',
         'Constructor.views.editorQuestions.EditorToolbar'
     ],
+    controller: 'editor-questions-controller',
     title: 'Редактирование вопросов',
     width: '70%',
     height: '100%',
