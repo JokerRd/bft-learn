@@ -1,4 +1,4 @@
-Ext.define('Constructor.views.models.QuestionModel', {
+Ext.define('Constructor.models.QuestionModel', {
     extend: 'Ext.data.Model',
     fields: [
         {
@@ -18,8 +18,7 @@ Ext.define('Constructor.views.models.QuestionModel', {
             type: 'string'
         },
         {
-            name: 'answers',
-            type: 'answer'
+            name: 'answers'
         }
     ],
     idProperty: 'id'
