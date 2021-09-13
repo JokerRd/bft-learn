@@ -4,6 +4,7 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionFor
     requires: [
         'Constructor.views.editorQuestions.configurationQuestions.TypeQuestionComboBox',
         'Constructor.views.editorQuestions.configurationQuestions.AnswersFormPanel',
+        'Constructor.views.editorQuestions.configurationQuestions.buttons.SaveQuestionButton'
     ],
     title: 'Вопрос',
     width: '100%',
@@ -24,6 +25,9 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionFor
         },
         {
             xtype: 'answers-panel',
+        },
+        {
+            xtype: 'save-question-btn'
         }
     ]
 })
