@@ -27,10 +27,5 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionFor
         {
             xtype: 'answers-panel',
         }
-    ],
-    buttons: [
-        {
-            xtype: 'save-question-btn'
-        }
     ]
 })

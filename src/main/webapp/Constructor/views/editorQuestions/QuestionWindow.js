@@ -1,17 +1,25 @@
 Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.question-window',
+    controller: 'window-question-controller',
     requires: [
-        'Constructor.views.editorQuestions.configurationQuestions.QuestionsPanel'
+        'Constructor.views.editorQuestions.configurationQuestions.buttons.SaveQuestionButton',
+        'Constructor.controllers.configurationQuestions.WindowQuestionController',
+        'Constructor.views.editorQuestions.configurationQuestions.QuestionFormPanel'
     ],
     reference: 'question-window',
     height: "90vh",
     width: '70vw',
-    layout: 'fit',
+    layout: 'vbox',
     items: [
         {
-            xtype: 'questions'
+            xtype: 'question'
+        },
+        {
+            xtype: 'save-question-btn',
+            handler: 'onSaveQuestionClick'
         }
-    ]
+
+    ],
 });
 

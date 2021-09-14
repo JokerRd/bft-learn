@@ -18,9 +18,6 @@ Ext.define('Constructor.views.editorQuestions.EditorQuestions', {
         },
         {
             xtype: 'questions-grid'
-        },
-        {
-            xtype: 'question-window'
         }
     ]
 })
