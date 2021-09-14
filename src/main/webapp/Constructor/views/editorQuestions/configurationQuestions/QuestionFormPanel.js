@@ -6,6 +6,9 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionFor
         'Constructor.views.editorQuestions.configurationQuestions.AnswersFormPanel',
         'Constructor.views.editorQuestions.configurationQuestions.buttons.SaveQuestionButton',
     ],
+    config: {
+        idQuestions: -1
+    },
     title: 'Вопрос',
     width: '100%',
     reference: 'question-form',

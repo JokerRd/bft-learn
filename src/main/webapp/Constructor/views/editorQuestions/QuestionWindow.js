@@ -16,10 +16,8 @@ Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
             xtype: 'question'
         },
         {
-            xtype: 'save-question-btn',
-            handler: 'onSaveQuestionClick'
+            xtype: 'save-question-btn'
         }
-
     ],
 });
 

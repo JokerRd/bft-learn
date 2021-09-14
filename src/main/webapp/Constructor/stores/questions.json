@@ -5,9 +5,8 @@
       "id": 1,
       "nameQuestion": "Крутой вопрос",
       "descriptionQuestion": "Сколько будет 10000*10000000?",
-      "typeQuestion": "C вводимым ответом",
-      "answers": {
-      }
+      "typeQuestion": "С вводимым ответом",
+      "answers": []
     },
     {
       "id": 2,

@@ -4,5 +4,8 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.buttons.Sav
     text: 'Сохранить вопрос',
     margin: '5 5 5 5',
     width: 100,
-    height: 50
+    height: 50,
+    listeners: {
+        click: 'onSaveQuestionClick'
+    }
 })

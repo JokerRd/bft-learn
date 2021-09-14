@@ -8,43 +8,48 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
     onEditQuestionDoubleClick: function (dv, record, item, index, e) {
         let id = record.data.id;
         let store = Ext.data.StoreManager.lookup('question-store');
-        let element  = store.getById(id);
+        let element = store.getById(id);
         let answers = createAnswerForForm(element.data.answers);
         let answerForm = Ext.create('Constructor.views.editorQuestions.configurationQuestions.AnswersPanel', {
             items: answers
         });
         let form = Ext.create('Constructor.views.editorQuestions.configurationQuestions.QuestionFormPanel');
         form.getForm().setValues(element.data);
+        form.setIdQuestions(id);
         let answerPanel = form.items.last();
         answerPanel.remove(0);
-        answerPanel.insert(0,answerForm);
-        console.log(answerPanel);
+        answerPanel.insert(0, answerForm);
         let window = Ext.create('Constructor.views.editorQuestions.QuestionWindow', {
-            items: form
+            items: [
+                form,
+                Ext.create('Constructor.views.editorQuestions.configurationQuestions.buttons.SaveQuestionButton')
+            ]
         });
         window.show();
     }
 });
 
 
-function createAnswerForForm(answers){
+function createAnswerForForm(answers) {
     let fieldsets = [];
-    for (let answer of answers){
-        let fieldset = Ext.create('Constructor.views.editorQuestions.configurationQuestions.Answer', {
-            items: [
-                {
-                    xtype: 'textfield',
-                    fieldLabel: "Введите ответ",
-                    value: answer.answer
-                },
-                {
-                    xtype: 'checkboxfield',
-                    fieldLabel: "Правильный?",
-                    value: answer.isRight
-                }
-            ]
-        });
-        fieldsets.push(fieldset);
+    if (answers !== null && answers.length > 0) {
+        for (let answer of answers) {
+            let fieldset = Ext.create('Constructor.views.editorQuestions.configurationQuestions.Answer', {
+                items: [
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: "Введите ответ",
+                        value: answer.answer
+                    },
+                    {
+                        xtype: 'checkboxfield',
+                        fieldLabel: "Правильный?",
+                        value: answer.isRight
+                    }
+                ]
+            });
+            fieldsets.push(fieldset);
+        }
     }
     return fieldsets;
 }
