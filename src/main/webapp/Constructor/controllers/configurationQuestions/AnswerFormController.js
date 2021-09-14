@@ -4,8 +4,7 @@ Ext.define('Constructor.controllers.configurationQuestions.AnswerFormController'
     onAddAnswerClick: function () {
         let answers = this.lookupReference('answers');
         answers.add({
-            xtype: 'textfield',
-            fieldLabel: 'Ответ'
+            xtype: 'answer-fieldset'
         });
     }
 });

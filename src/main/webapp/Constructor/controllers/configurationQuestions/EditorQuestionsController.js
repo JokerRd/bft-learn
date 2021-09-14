@@ -16,6 +16,11 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
         let window = Ext.create('Constructor.views.editorQuestions.QuestionWindow', {
             items: form
         });
-        window.show();
+        let answerForm = Ext.create('Constructor.views.editorQuestions.configurationQuestions.AnswersPanel');
     }
 });
+
+
+function createTextFieldForAnswerForm(answers){
+
+}
