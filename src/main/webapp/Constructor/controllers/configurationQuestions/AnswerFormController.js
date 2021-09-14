@@ -1,6 +1,6 @@
-Ext.define('Constructor.controllers.configurationQuestions.QuestionFormController', {
+Ext.define('Constructor.controllers.configurationQuestions.AnswerFormController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.question-form-control',
+    alias: 'controller.answer-form-control',
     onAddAnswerClick: function () {
         let answers = this.lookupReference('answers');
         answers.add({

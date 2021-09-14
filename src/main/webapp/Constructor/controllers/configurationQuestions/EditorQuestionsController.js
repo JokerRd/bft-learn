@@ -4,5 +4,12 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
     onAddQuestionClick:function ()  {
         let window = Ext.create('Constructor.views.editorQuestions.QuestionWindow');
         window.show();
+    },
+    onAddAnswerClick: function () {
+        let answers = this.lookupReference('answers');
+        answers.add({
+            xtype: 'textfield',
+            fieldLabel: 'Ответ'
+        });
     }
 });
