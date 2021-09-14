@@ -3,7 +3,9 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionsPa
     alias: 'widget.questions',
     requires: [
         'Constructor.views.editorQuestions.configurationQuestions.QuestionFormPanel',
+        'Constructor.controllers.configurationQuestions.EditorQuestionsController'
     ],
+    controller: 'editor-questions-controller',
     width: '100%',
     reference: 'questions',
     bodyPadding: 15,
