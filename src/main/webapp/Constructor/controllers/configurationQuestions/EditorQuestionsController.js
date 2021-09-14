@@ -4,5 +4,8 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
     onAddQuestionClick: function () {
         let window = Ext.create('Constructor.views.editorQuestions.QuestionWindow');
         window.show();
+    },
+    onEditQuestionDoubleClick: function (dv, record, item, index, e) {
+        console.log(dv);
     }
 });

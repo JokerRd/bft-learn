@@ -7,6 +7,9 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     width: '100%',
     height: 500,
     store: questionsGrid,
+    listeners: {
+        itemdblclick: 'onEditQuestionDoubleClick'
+    },
     columns: [
         {
             xtype: 'rownumberer'
