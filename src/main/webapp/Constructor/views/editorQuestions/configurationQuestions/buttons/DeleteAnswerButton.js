@@ -3,5 +3,11 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.buttons.Del
     alias: 'widget.delete-answer-btn',
     text: 'Удалить ответ',
     margin: '5 5 5 5',
-    height: 50
+    height: 50,
+    handler: function () {
+        let currentFieldset = this.findParentByType('fieldset');
+        let form = currentFieldset.findParentByType('form');
+        form.remove(currentFieldset);
+        console.log(form)
+    }
 })
