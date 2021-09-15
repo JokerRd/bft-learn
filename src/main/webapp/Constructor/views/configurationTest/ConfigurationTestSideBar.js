@@ -1,3 +1,5 @@
+let testStore = Ext.create('Constructor.stores.TestStore');
+
 Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
     extend: 'Ext.tab.Panel',
     alias: "widget.config-sidebar",
@@ -5,6 +7,7 @@ Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
         'Constructor.views.configurationTest.PrimaryConfigurationFormPanel',
         'Constructor.views.configurationTest.SecondaryConfigurationFormPanel'
     ],
+    store: testStore,
     title: "Настройки теста",
     items: [
         {

@@ -4,3 +4,4 @@ Ext.define('Constructor.stores.TestStore', {
     storeId: 'test-store',
     autoLoad: true
 });
+

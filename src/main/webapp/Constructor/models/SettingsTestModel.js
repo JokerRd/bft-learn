@@ -2,10 +2,6 @@ Ext.define('Constructor.models.SettingsTestModel', {
     extend: 'Ext.data.Model',
     fields: [
         {
-            name: 'id',
-            type: 'integer'
-        },
-        {
             name: 'nameTest',
             type: 'string'
         },
@@ -16,9 +12,6 @@ Ext.define('Constructor.models.SettingsTestModel', {
         {
             name: 'isShowResult',
             type: 'boolean'
-        },
-        {
-            name: 'questions'
         }
     ],
     idProperty: 'id'
