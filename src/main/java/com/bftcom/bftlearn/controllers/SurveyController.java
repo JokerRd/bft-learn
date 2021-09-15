@@ -1,6 +1,7 @@
 package com.bftcom.bftlearn.controllers;
 
 import com.bftcom.bftlearn.repository.TestRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
