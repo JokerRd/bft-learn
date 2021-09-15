@@ -45,7 +45,8 @@ function createAnswerForForm(answers) {
                         xtype: 'checkboxfield',
                         fieldLabel: "Правильный?",
                         value: answer.isRight
-                    }
+                    },
+                    Ext.create('Constructor.views.editorQuestions.configurationQuestions.buttons.DeleteAnswerButton')
                 ]
             });
             fieldsets.push(fieldset);

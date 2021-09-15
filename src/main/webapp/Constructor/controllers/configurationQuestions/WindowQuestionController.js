@@ -25,27 +25,12 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
             question.id = form.getIdQuestions();
             let record = store.getById(form.getIdQuestions());
             record.set(question.data);
+            record.commit();
             console.log(question.data);
             console.log(record);
         }
         window.close();
     },
-    onUpdateQuestionClick: function () {
-        let form = this.lookupReference('question-form');
-        let window = form.findParentByType('window');
-        let store = Ext.data.StoreManager.lookup('question-store');
-        let record = store.getById(form.getIdQuestions());
-        let newQuestion = Ext.create('Constructor.models.QuestionModel', {
-                id: form.getIdQuestions(),
-                nameQuestion: form.items.get(0).getValue(),
-                descriptionQuestion: form.items.get(1).getValue(),
-                typeQuestion: form.items.get(2).getValue(),
-                answers: answersModel
-            }
-        );
-        console.log(record);
-        console.log(form);
-    }
 });
 
 

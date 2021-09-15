@@ -8,6 +8,5 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.buttons.Del
         let currentFieldset = this.findParentByType('fieldset');
         let form = currentFieldset.findParentByType('form');
         form.remove(currentFieldset);
-        console.log(form)
     }
 })
