@@ -10,6 +10,8 @@ import javax.persistence.*;
 public class QuestionEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "seq_test_entity", sequenceName = "seq_test_entity", allocationSize = 1)
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
