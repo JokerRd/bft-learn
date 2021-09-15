@@ -10,6 +10,15 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     listeners: {
         itemdblclick: 'onEditQuestionDoubleClick'
     },
+    dockedItems: [{
+        xtype: 'pagingtoolbar',
+        store: questionsGrid,
+        dock: 'bottom',
+        displayInfo: true,
+        beforePageText: 'Страница',
+        afterPageText: 'из {0}',
+        displayMsg: 'Вопросы {0} - {1} из {2}'
+    }],
     columns: [
         {
             xtype: 'rownumberer'
