@@ -18,9 +18,6 @@ public class QuestionEntity {
     @JoinColumn(name = "id_test", nullable = false)
     private TestEntity testEntity;
 
-    @Column(name = "id_test")
-    private long idTest;
-
     @Column(name = "name_question")
     private String  nameQuestion;
 

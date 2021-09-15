@@ -19,9 +19,6 @@ public class AnswerEntity {
     @JoinColumn(name = "id_question", nullable = false)
     private QuestionEntity questionEntity;
 
-    @Column(name = "id_question")
-    private long idQuestion;
-
     @Column(name = "answer")
     private String answer;
 
