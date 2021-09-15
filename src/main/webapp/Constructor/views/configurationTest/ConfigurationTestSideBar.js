@@ -6,15 +6,6 @@ Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
         'Constructor.views.configurationTest.SecondaryConfigurationFormPanel'
     ],
     title: "Настройки теста",
-    width: '30%',
-    height: '100%',
-    region: 'west',
-    layout: {
-        type: 'vbox',
-        align: 'stretch',
-
-    },
-
     items: [
         {
             xtype: 'primary-config-form'

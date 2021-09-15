@@ -54,3 +54,7 @@ function createAnswerForForm(answers) {
     }
     return fieldsets;
 }
+
+function onSaveTestClick() {
+    console.log('SDFsf')
+}

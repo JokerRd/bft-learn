@@ -21,7 +21,8 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     }],
     columns: [
         {
-            xtype: 'rownumberer'
+            xtype: 'rownumberer',
+            width: 50
         },
         {
             header: 'Название вопроса',

@@ -3,7 +3,8 @@ Ext.define('Constructor.views.ConstructorTest', {
     alias: 'widget.constructor-test',
     requires: [
         'Constructor.views.configurationTest.ConfigurationTestSideBar',
-        'Constructor.views.editorQuestions.EditorQuestions'
+        'Constructor.views.editorQuestions.EditorQuestions',
+        'Constructor.views.LeftBorderPanel'
     ],
     title: 'Создание теста',
     width: '80%',
@@ -12,7 +13,7 @@ Ext.define('Constructor.views.ConstructorTest', {
     layout: 'border',
     items: [
         {
-            xtype: 'config-sidebar'
+            xtype: 'left-border-panel'
         },
         {
             xtype: 'editor-questions'
