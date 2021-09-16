@@ -7,4 +7,5 @@ public interface TestService extends EntityService<TestDto> {
 
 
     void updateEntity(TestDto updatedTest);
+
 }

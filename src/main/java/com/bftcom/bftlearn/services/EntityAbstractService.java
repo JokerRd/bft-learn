@@ -11,8 +11,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EntityAbstractService<EntityDto, Entity>  implements EntityService<EntityDto>{
 
-    private final AbstractMapper<EntityDto, Entity> mapper;
-    private final JpaRepository<Entity, Long> repository;
+    protected final AbstractMapper<EntityDto, Entity> mapper;
+    protected final JpaRepository<Entity, Long> repository;
 
     @Override
     public void createEntity(EntityDto newTest) {

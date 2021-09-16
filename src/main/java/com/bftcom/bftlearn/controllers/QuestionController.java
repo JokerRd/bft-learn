@@ -31,7 +31,7 @@ public class QuestionController {
 
     @PostMapping("/questions")
     public void createQuestion(@RequestBody QuestionDto questionDto) {
-
+        questionService.createEntity(questionDto);
     }
 
     @DeleteMapping("/questions/{id}")
