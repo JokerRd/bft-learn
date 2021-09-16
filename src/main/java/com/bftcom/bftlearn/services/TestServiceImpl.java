@@ -34,7 +34,8 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public List<TestDto> getAllTest() {
-        return null;
+        List<TestEntity> entities = repository.findAll();
+        return testModelMapper.entityToDtoList(entities);
     }
 
     @Override

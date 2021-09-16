@@ -24,21 +24,24 @@ public class TestController {
     @GetMapping
     @Operation(summary = "Получить все тесты")
     public List<TestDto> getAllTest(){
-        return new ArrayList<>();
+        return testService.getAllTest();
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Получить тест по id")
     public TestDto getTest(@PathVariable(name = "id") long id){
         return new TestDto(id,"q", "d", true );
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Создать тест")
     public void createTest(@Validated({NewTest.class}) @RequestBody TestDto newTest){
         testService.createTest(newTest);
     }
 
     @PutMapping()
+    @Operation(summary = "Обновить тест")
     public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest){
         testService.updateTest(updatedTest);
     }
