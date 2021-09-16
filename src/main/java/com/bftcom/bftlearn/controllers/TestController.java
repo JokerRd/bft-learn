@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class TestController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createTest(@RequestBody TestDto newTest){
+    public void createTest(@Valid @RequestBody TestDto newTest){
         System.out.println(newTest);
         //testService.createTest(newTest);
     }
