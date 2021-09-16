@@ -4,7 +4,7 @@ import com.bftcom.bftlearn.dto.answer.AnswerDto;
 import com.bftcom.bftlearn.entity.AnswerEntity;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface AnswerModelMapper {
 
     AnswerDto entityToDto(AnswerEntity entity);
