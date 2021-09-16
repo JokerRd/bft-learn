@@ -1,4 +1,6 @@
 package com.bftcom.bftlearn.services;
 
-public class QuestionService {
+import com.bftcom.bftlearn.dto.question.QuestionDto;
+
+public interface QuestionService extends EntityService<QuestionDto> {
 }

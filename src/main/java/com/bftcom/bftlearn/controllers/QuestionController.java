@@ -1,13 +1,18 @@
 package com.bftcom.bftlearn.controllers;
 
 import com.bftcom.bftlearn.dto.question.QuestionDto;
+import com.bftcom.bftlearn.services.QuestionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/tests")
+@RequiredArgsConstructor
 public class QuestionController {
+
+    private final QuestionService questionService;
 
     @GetMapping("/{idTest}/questions")
     public List<QuestionDto> getAllQuestions(@PathVariable long idTest) {
@@ -16,7 +21,7 @@ public class QuestionController {
 
     @GetMapping("/questions/{id}")
     public QuestionDto getQuestion(@PathVariable long id) {
-        return null;
+        return questionService.getEntity(id);
     }
 
     @PutMapping("/questions")
@@ -31,6 +36,6 @@ public class QuestionController {
 
     @DeleteMapping("/questions/{id}")
     public void deleteQuestion(@PathVariable long id) {
-
+        questionService.deleteEntity(id);
     }
 }
