@@ -2,6 +2,7 @@ package com.bftcom.bftlearn.services;
 
 import com.bftcom.bftlearn.dto.test.TestDto;
 import com.bftcom.bftlearn.entity.TestEntity;
+import com.bftcom.bftlearn.exceptions.TestException;
 import com.bftcom.bftlearn.mappers.TestModelMapper;
 import com.bftcom.bftlearn.repository.TestRepository;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +25,11 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public void updateTest(TestDto updatedTest) {
-
+        if (repository.findById(updatedTest.getId()).isPresent()) {
+            createTest(updatedTest);
+        } else {
+            throw new TestException("Неверный id");
+        }
     }
 
     @Override

@@ -1,13 +1,15 @@
 package com.bftcom.bftlearn.controllers;
 
+import com.bftcom.bftlearn.dto.test.NewTest;
 import com.bftcom.bftlearn.dto.test.TestDto;
+import com.bftcom.bftlearn.dto.test.UpdateTest;
 import com.bftcom.bftlearn.services.TestService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,14 +34,13 @@ public class TestController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createTest(@Valid @RequestBody TestDto newTest){
-        System.out.println(newTest);
-        //testService.createTest(newTest);
+    public void createTest(@Validated({NewTest.class}) @RequestBody TestDto newTest){
+        testService.createTest(newTest);
     }
 
     @PutMapping()
-    public void updateTest(@RequestBody TestDto updatedTest){
-
+    public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest){
+        testService.updateTest(updatedTest);
     }
 }
 
