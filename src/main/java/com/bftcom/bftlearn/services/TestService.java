@@ -1,31 +1,10 @@
 package com.bftcom.bftlearn.services;
 
 import com.bftcom.bftlearn.dto.test.TestDto;
-import java.util.List;
+import com.bftcom.bftlearn.entity.TestEntity;
 
-public interface TestService {
+public interface TestService extends EntityService<TestDto> {
 
-    /**
-     * Создание сущности теста.
-     */
-    void createTest(TestDto newTest);
 
-    /**
-     * Обновление сущности теста.
-     */
-    void updateTest(TestDto updatedTest);
-
-    /**
-     * Получить все тесты.
-     * @return - лист дто тестов.
-     */
-    List<TestDto> getAllTest();
-
-    /**
-     * Получить определенный тест.
-     * @param id - ид теста.
-     * @return - дто теста.
-     */
-    TestDto getTest(long id);
-
+    void updateEntity(TestDto updatedTest);
 }

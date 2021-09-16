@@ -3,7 +3,7 @@ package com.bftcom.bftlearn.controllers;
 import com.bftcom.bftlearn.dto.test.NewTest;
 import com.bftcom.bftlearn.dto.test.TestDto;
 import com.bftcom.bftlearn.dto.test.UpdateTest;
-import com.bftcom.bftlearn.services.TestServiceAbs;
+import com.bftcom.bftlearn.services.TestService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,7 +20,7 @@ import java.util.List;
 @Validated
 public class TestController {
 
-    private final TestServiceAbs testService;
+    private final TestService testService;
 
     @GetMapping
     @Operation(summary = "Получить все тесты")
