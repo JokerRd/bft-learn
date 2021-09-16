@@ -5,9 +5,6 @@ import com.bftcom.bftlearn.entity.QuestionEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface QuestionModelMapper {
+public interface QuestionModelMapper extends AbstractMapper<QuestionDto, QuestionEntity> {
 
-    QuestionDto entityToDto(QuestionEntity entity);
-    
-    QuestionEntity dtoToEntity(QuestionDto dto);
 }
