@@ -3,6 +3,7 @@ package com.bftcom.bftlearn.entity;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -11,7 +12,7 @@ public class QuestionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "seq_test_entity", sequenceName = "seq_test_entity", allocationSize = 1)
+    @SequenceGenerator(name = "seq_question_entity", sequenceName = "seq_question_entity", allocationSize = 1)
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -26,4 +27,7 @@ public class QuestionEntity {
 
     @Column(name = "type_question")
     private String typeQuestion;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<AnswerEntity> answers;
 }

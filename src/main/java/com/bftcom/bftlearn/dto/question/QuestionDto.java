@@ -2,6 +2,8 @@ package com.bftcom.bftlearn.dto.question;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class QuestionDto {
 
@@ -14,4 +16,7 @@ public class QuestionDto {
     private final String descriptionQuestion;
 
     private final String typeQuestion;
+
+    private final List<String> answers;
+
 }
