@@ -17,6 +17,4 @@ public class QuestionDto {
 
     private final String typeQuestion;
 
-    private final List<String> answers;
-
 }
