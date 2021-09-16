@@ -8,6 +8,7 @@ import com.bftcom.bftlearn.repository.TestRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -40,6 +41,11 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public TestDto getTest(long id) {
-        return null;
+        try {
+            TestEntity entity = repository.getById(id);
+            return testModelMapper.entityToDto(entity);
+        } catch (EntityNotFoundException exception) {
+            throw new TestException("Неверный id");
+        }
     }
 }

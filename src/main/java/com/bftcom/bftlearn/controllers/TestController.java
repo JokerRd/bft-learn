@@ -10,39 +10,41 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import javax.validation.constraints.Min;
 import java.util.List;
 
 
 @RestController
 @RequestMapping("/tests")
 @RequiredArgsConstructor
+@Validated
 public class TestController {
 
     private final TestService testService;
 
     @GetMapping
     @Operation(summary = "Получить все тесты")
-    public List<TestDto> getAllTest(){
+    public List<TestDto> getAllTest() {
         return testService.getAllTest();
     }
 
     @GetMapping("/{id}")
     @Operation(summary = "Получить тест по id")
-    public TestDto getTest(@PathVariable(name = "id") long id){
-        return new TestDto(id,"q", "d", true );
+    public TestDto getTest(@PathVariable(name = "id")
+                           @Min(value = 1, message = "Неверный id") long id) {
+        return testService.getTest(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Создать тест")
-    public void createTest(@Validated({NewTest.class}) @RequestBody TestDto newTest){
+    public void createTest(@Validated({NewTest.class}) @RequestBody TestDto newTest) {
         testService.createTest(newTest);
     }
 
     @PutMapping()
     @Operation(summary = "Обновить тест")
-    public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest){
+    public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest) {
         testService.updateTest(updatedTest);
     }
 }
