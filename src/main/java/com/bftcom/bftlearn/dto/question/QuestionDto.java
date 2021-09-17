@@ -1,8 +1,6 @@
 package com.bftcom.bftlearn.dto.question;
 
 import com.bftcom.bftlearn.dto.answer.AnswerDto;
-import com.bftcom.bftlearn.dto.test.NewTest;
-import com.bftcom.bftlearn.dto.test.UpdateTest;
 import lombok.Data;
 
 import javax.validation.constraints.Min;
