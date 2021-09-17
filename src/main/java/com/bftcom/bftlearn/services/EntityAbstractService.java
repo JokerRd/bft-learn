@@ -51,15 +51,5 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
         repository.deleteById(id);
     }
 
-    @RestControllerAdvice
-    public class EntityIdHandler{
-
-        @ExceptionHandler(EntityNotFoundException.class)
-        private void checkId() {
-            System.out.println("sdfsd");
-            throw new TestException(getMessageNotFoundId());
-        }
-    }
-
 
 }
