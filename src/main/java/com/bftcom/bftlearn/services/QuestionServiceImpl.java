@@ -32,6 +32,6 @@ public class QuestionServiceImpl
     public void createEntity(QuestionDto newTest) {
         TestEntity testEntity = testRepository.getById(newTest.getIdTest());
         QuestionEntity questionEntity = mapper.dtoToEntityWithOtherEntity(newTest, testEntity);
-        questionRepository.save(questionEntity);
+        questionRepository.saveAndFlush(questionEntity);
     }
 }
