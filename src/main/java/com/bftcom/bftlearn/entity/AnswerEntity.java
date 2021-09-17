@@ -15,10 +15,6 @@ public class AnswerEntity {
     @SequenceGenerator(name = "seq_answer_entity", sequenceName = "seq_answer_entity", allocationSize = 1)
     private long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_question", nullable = false)
-    private QuestionEntity questionEntity;
-
     @Column(name = "answer")
     private String answer;
 
