@@ -3,6 +3,7 @@ package com.bftcom.bftlearn.controllers;
 import com.bftcom.bftlearn.dto.question.QuestionDto;
 import com.bftcom.bftlearn.services.QuestionService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class QuestionController {
 
     @GetMapping("/{idTest}/questions")
     public List<QuestionDto> getAllQuestions(@PathVariable long idTest) {
-        return null;
+        return questionService.getAllEntities(idTest);
     }
 
     @GetMapping("/questions/{id}")
@@ -30,6 +31,7 @@ public class QuestionController {
     }
 
     @PostMapping("/questions")
+    @ResponseStatus(HttpStatus.CREATED)
     public void createQuestion(@RequestBody QuestionDto questionDto) {
         questionService.createEntity(questionDto);
     }

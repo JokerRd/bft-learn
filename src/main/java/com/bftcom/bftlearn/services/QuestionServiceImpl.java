@@ -6,8 +6,9 @@ import com.bftcom.bftlearn.entity.TestEntity;
 import com.bftcom.bftlearn.mappers.QuestionModelMapper;
 import com.bftcom.bftlearn.repository.QuestionRepository;
 import com.bftcom.bftlearn.repository.TestRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Service
@@ -33,5 +34,10 @@ public class QuestionServiceImpl
         TestEntity testEntity = testRepository.getById(newTest.getIdTest());
         QuestionEntity questionEntity = mapper.dtoToEntityWithOtherEntity(newTest, testEntity);
         questionRepository.saveAndFlush(questionEntity);
+    }
+
+    public List<QuestionDto> getAllEntities(long idTest) {
+        TestEntity testEntity = testRepository.getById(idTest);
+        return mapper.entityToDtoList(questionRepository.findAllByTestEntity(testEntity));
     }
 }
