@@ -42,7 +42,7 @@ public class TestController {
         testService.createEntity(newTest);
     }
 
-    @PutMapping()
+    @PutMapping
     @Operation(summary = "Обновить тест")
     public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest) {
         testService.updateEntity(updatedTest);

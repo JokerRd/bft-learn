@@ -10,9 +10,9 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
 public interface QuestionModelMapper extends AbstractMapper<QuestionDto, QuestionEntity> {
 
-    @Mappings({
+    /*@Mappings({
             @Mapping(target = "testEntity", source = "entity"),
             @Mapping(target = "id", source = "dto.id")
     })
-    QuestionEntity dtoToEntityWithOtherEntity(QuestionDto dto, TestEntity entity);
+    QuestionEntity dtoToEntityWithOtherEntity(QuestionDto dto, TestEntity entity);*/
 }

@@ -30,11 +30,10 @@ public class QuestionServiceImpl
     }
 
     @Override
-    public void createEntity(QuestionDto newTest) {
-        TestEntity testEntity = testRepository.getById(newTest.getIdTest());
-        QuestionEntity questionEntity = mapper.dtoToEntityWithOtherEntity(newTest, testEntity);
-        questionRepository.saveAndFlush(questionEntity);
+    protected String getMessageNotFoundId() {
+        return super.getMessageNotFoundId();
     }
+
 
     public List<QuestionDto> getAllEntities(long idTest) {
         TestEntity testEntity = testRepository.getById(idTest);

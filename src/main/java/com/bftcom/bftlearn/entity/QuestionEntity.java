@@ -16,8 +16,11 @@ public class QuestionEntity {
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_test", nullable = false)
+    @JoinColumn(name = "id_test", nullable = false, updatable = false, insertable = false)
     private TestEntity testEntity;
+
+    @Column(name = "id_test")
+    private long idTest;
 
     @Column(name = "name_question")
     private String  nameQuestion;
