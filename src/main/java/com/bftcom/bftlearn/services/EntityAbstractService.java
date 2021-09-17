@@ -38,7 +38,7 @@ public class EntityAbstractService<EntityDto , Entity> implements EntityService<
 
     @Override
     public EntityDto getEntity(long id) {
-        checkId(repository, id);
+        //checkId(repository, id);
         return mapper.entityToDto(repository.getById(id));
     }
 
