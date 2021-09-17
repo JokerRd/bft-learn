@@ -18,4 +18,9 @@ public class TestServiceImpl extends EntityAbstractService<TestDto, TestEntity> 
     public void updateEntity(TestDto updatedTest) {
         super.updateEntity(updatedTest, updatedTest.getId());
     }
+
+    @Override
+    public String getNotFoundIdEntity() {
+        return "Неверный id теста";
+    }
 }
