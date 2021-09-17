@@ -12,7 +12,10 @@ public class EntityAbstractService<EntityDto, Entity> implements EntityService<E
 
     protected final AbstractMapper<EntityDto, Entity> mapper;
     protected final JpaRepository<Entity, Long> repository;
-    private final String messageNotFoundId = "Неверный id";
+
+    protected String getMessageNotFoundId(){
+        return "Неверный id";
+    }
 
 
     @Override
@@ -23,7 +26,7 @@ public class EntityAbstractService<EntityDto, Entity> implements EntityService<E
 
     @Override
     public void updateEntity(EntityDto updatedTest, long id) {
-        checkId(repository, id, messageNotFoundId);
+        checkId(repository, id);
         createEntity(updatedTest);
     }
 
@@ -35,21 +38,19 @@ public class EntityAbstractService<EntityDto, Entity> implements EntityService<E
 
     @Override
     public EntityDto getEntity(long id) {
-        checkId(repository, id, messageNotFoundId);
+        checkId(repository, id);
         return mapper.entityToDto(repository.getById(id));
     }
 
     @Override
     public void deleteEntity(long id) {
-        checkId(repository, id, messageNotFoundId);
+        checkId(repository, id);
         repository.deleteById(id);
     }
 
-    protected void checkId(JpaRepository<Entity, Long> repository,
-                           long id,
-                           String message) {
+    protected void checkId(JpaRepository<Entity, Long> repository, long id) {
         if (!repository.findById(id).isPresent()) {
-            throw new TestException(message);
+            throw new TestException(getMessageNotFoundId());
         }
     }
 }
