@@ -3,6 +3,8 @@ package com.bftcom.bftlearn.controllers;
 import com.bftcom.bftlearn.dto.test.NewTest;
 import com.bftcom.bftlearn.dto.test.TestDto;
 import com.bftcom.bftlearn.dto.test.UpdateTest;
+import com.bftcom.bftlearn.exceptions.TestException;
+import com.bftcom.bftlearn.services.EntityService;
 import com.bftcom.bftlearn.services.TestService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -16,11 +18,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tests")
-@RequiredArgsConstructor
 @Validated
-public class TestController {
+public class TestController extends AbstractController<TestDto> {
 
     private final TestService testService;
+
+    protected TestController(TestService testService) {
+        super(testService);
+        this.testService = testService;
+    }
 
     @GetMapping
     @Operation(summary = "Получить все тесты")

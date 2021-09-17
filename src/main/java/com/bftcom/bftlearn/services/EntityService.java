@@ -29,4 +29,5 @@ public interface EntityService<EntityDto> {
 
     void deleteEntity(long id);
 
+    String getNotFoundIdEntity();
 }

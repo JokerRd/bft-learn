@@ -40,6 +40,7 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
     }
 
     @Override
+    @IdEntity(message = "dfsdfsfds")
     public EntityDto getEntity(long id) {
         //checkId(repository, id);
         return mapper.entityToDto(repository.getById(id));
@@ -51,5 +52,8 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
         repository.deleteById(id);
     }
 
-
+    @Override
+    public String getNotFoundIdEntity() {
+        return "Неверный id";
+    }
 }

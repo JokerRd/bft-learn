@@ -10,7 +10,4 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface IdEntity {
 
-    String message() default "Неверный id";
-    public Class<? extends ExceptionIdHandler> targetCatchHandler() default ExceptionIdHandlerImpl.class;
-    Class<? extends Throwable> targetException() default EntityNotFoundException.class;
 }

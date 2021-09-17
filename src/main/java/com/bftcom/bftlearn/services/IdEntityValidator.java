@@ -6,7 +6,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class IdEntityValidator implements ConstraintValidator<IdEntity, Exception> {
+public class IdEntityValidator implements ConstraintValidator<IdEntity, EntityNotFoundException> {
 
     private String message;
 
@@ -17,11 +17,10 @@ public class IdEntityValidator implements ConstraintValidator<IdEntity, Exceptio
     }
 
     @Override
-    public boolean isValid(Exception e, ConstraintValidatorContext constraintValidatorContext) {
-        try {
-
-        } catch (EntityNotFoundException exception) {
-            throw new TestException(message);
+    public boolean isValid(EntityNotFoundException e,
+                           ConstraintValidatorContext constraintValidatorContext) {
+        if (e != null) {
+            throw new  TestException(message, e);
         }
         return true;
     }
