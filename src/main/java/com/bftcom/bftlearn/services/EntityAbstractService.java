@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 @RequiredArgsConstructor
-public class EntityAbstractService<EntityDto, Entity> implements EntityService<EntityDto> {
+public class EntityAbstractService<EntityDto , Entity> implements EntityService<EntityDto> {
 
     protected final AbstractMapper<EntityDto, Entity> mapper;
     protected final JpaRepository<Entity, Long> repository;

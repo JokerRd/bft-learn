@@ -30,7 +30,7 @@ public class QuestionController {
 
     @PutMapping("/questions")
     public void updateQuestion(@RequestBody QuestionDto questionDto) {
-
+        questionService.updateEntity(questionDto, questionDto.getId());
     }
 
     @PostMapping("/questions")
