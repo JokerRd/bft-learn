@@ -16,4 +16,5 @@ public class AnswerServiceImpl
                              AnswerRepository repository) {
         super(mapper, repository);
     }
+
 }

@@ -35,4 +35,9 @@ public class QuestionServiceImpl
         TestEntity testEntity = testRepository.getById(idTest);
         return mapper.entityToDtoList(questionRepository.findAllByTestEntity(testEntity));
     }
+
+    @Override
+    public String getMessageNotFoundId() {
+        return "Неверный id вопроса";
+    }
 }
