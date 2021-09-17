@@ -6,6 +6,6 @@ public class ExceptionIdHandlerImpl implements ExceptionIdHandler{
 
     @Override
     public void handleException(EntityNotFoundException exception) {
-        
+
     }
 }

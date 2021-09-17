@@ -29,10 +29,6 @@ public class QuestionServiceImpl
         this.questionRepository = repository;
     }
 
-    @Override
-    protected String getMessageNotFoundId() {
-        return super.getMessageNotFoundId();
-    }
 
 
     public List<QuestionDto> getAllEntities(long idTest) {
