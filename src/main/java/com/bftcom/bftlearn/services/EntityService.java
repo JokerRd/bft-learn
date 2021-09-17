@@ -28,4 +28,5 @@ public interface EntityService<EntityDto> {
     EntityDto getEntity(long id);
 
     void deleteEntity(long id);
+
 }
