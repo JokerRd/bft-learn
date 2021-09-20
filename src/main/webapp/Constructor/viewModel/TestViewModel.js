@@ -1,6 +1,8 @@
-Ext.define('Constructor.views.viewModel.TestViewModel', {
+Ext.define('Constructor.viewModel.TestViewModel', {
     extend: 'Ext.app.ViewModel',
     data: {
-        test: null
+        test: {
+            nameTest: 'fsdf'
+        }
     }
 })

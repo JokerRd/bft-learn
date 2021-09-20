@@ -8,12 +8,14 @@ Ext.define('Constructor.views.configurationTest.PrimaryConfigurationFormPanel', 
         {
             xtype: 'textfield',
             fieldLabel: 'Название теста',
-            name: 'nameTest'
+            name: 'nameTest',
+            bind: '{test.nameTest}'
         },
         {
             xtype: 'textareafield',
             fieldLabel: 'Описание теста',
-            name: 'descriptionTest'
+            name: 'descriptionTest',
+            bind: '{test.descriptionTest}'
         }
     ]
 })
