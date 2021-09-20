@@ -31,6 +31,13 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
         }
         window.close();
     },
+
+    onLoadTest: function (obj, records, successful, operation) {
+        console.log(obj);
+        console.log(records);
+        console.log(successful);
+        console.log(operation);
+    }
 });
 
 

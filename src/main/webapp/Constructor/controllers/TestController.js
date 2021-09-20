@@ -14,5 +14,11 @@ Ext.define('Constructor.controllers.TestController', {
         testStore.add(testModel);
         console.log(questionStore)
         console.log(testModel)
+    },
+    onLoadTest: function (obj, records, successful, operation) {
+        console.log(obj);
+        console.log(records);
+        console.log(successful);
+        console.log(operation);
     }
 })
