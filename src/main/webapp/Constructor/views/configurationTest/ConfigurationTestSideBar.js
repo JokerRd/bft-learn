@@ -1,4 +1,4 @@
-let testViewModel = Ext.create('Constructor.viewModel.TestViewModel');
+
 
 Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
     extend: 'Ext.tab.Panel',
@@ -7,7 +7,6 @@ Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
         'Constructor.views.configurationTest.PrimaryConfigurationFormPanel',
         'Constructor.views.configurationTest.SecondaryConfigurationFormPanel'
     ],
-    viewModel: testViewModel,
     title: "Настройки теста",
     items: [
         {
@@ -18,6 +17,6 @@ Ext.define("Constructor.views.configurationTest.ConfigurationTestSideBar", {
         }
     ],
     listeners: {
-
+        initialize: 'onInitializeSettingsTest'
     }
 })

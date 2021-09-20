@@ -16,9 +16,34 @@ Ext.define('Constructor.controllers.TestController', {
         console.log(testModel)
     },
     onLoadTest: function (obj, records, successful, operation) {
-        console.log(obj);
-        console.log(records);
-        console.log(successful);
-        console.log(operation);
+        if (successful) {
+            let viewModel = this.getViewModel('test-view-model');
+            let store = Ext.data.StoreManager.lookup('test-store');
+            let data = store.getById(1).data;
+            viewModel.set('test', data)
+            console.log(viewModel);
+        }
+    },
+    listen: {
+        store: {
+            "test-store": {
+                load: 'onLoadTest'
+            }
+        }
     }
 })
+
+function addHandlerOnLoadTest(controller){
+    console.log(controller)
+    controller.getStore('test-store').load({
+            scope: this,
+            callback: function (record, operation, success) {
+                console.log(record);
+                console.log(operation);
+                console.log(success);
+                if (success) {
+                }
+            }
+        }
+    );
+}
