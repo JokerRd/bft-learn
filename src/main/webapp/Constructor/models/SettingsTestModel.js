@@ -14,5 +14,12 @@ Ext.define('Constructor.models.SettingsTestModel', {
             type: 'boolean'
         }
     ],
-    idProperty: 'id'
+    idProperty: 'id',
+    proxy: {
+        type: 'ajax',
+        api: {
+            destroy: 'http://localhost:8080/tests',
+            read: 'http://localhost:8080/tests'
+        }
+    }
 })

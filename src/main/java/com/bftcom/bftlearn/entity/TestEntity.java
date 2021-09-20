@@ -22,5 +22,5 @@ public class TestEntity {
     private String descriptionTest;
 
     @Column(name = "is_show_result")
-    private boolean isShowResult;
+    private Boolean isShowResult;
 }

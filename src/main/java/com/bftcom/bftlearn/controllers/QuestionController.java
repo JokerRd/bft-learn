@@ -2,7 +2,6 @@ package com.bftcom.bftlearn.controllers;
 
 import com.bftcom.bftlearn.dto.question.QuestionDto;
 import com.bftcom.bftlearn.services.QuestionService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +11,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tests")
-@RequiredArgsConstructor
 @Validated
-public class QuestionController {
+public class QuestionController extends AbstractController<QuestionDto> {
 
     private final QuestionService questionService;
+
+    public QuestionController(QuestionService questionService) {
+        super(questionService);
+        this.questionService = questionService;
+    }
 
     @GetMapping("/{idTest}/questions")
     public List<QuestionDto> getAllQuestions(@PathVariable @Min(value = 1, message = "Неверный id теста") long idTest) {

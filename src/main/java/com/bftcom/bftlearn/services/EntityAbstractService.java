@@ -1,13 +1,9 @@
 package com.bftcom.bftlearn.services;
 
-import com.bftcom.bftlearn.exceptions.TestException;
+
 import com.bftcom.bftlearn.mappers.AbstractMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -29,7 +25,6 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
 
     @Override
     public void updateEntity(EntityDto updatedTest, long id) {
-        //checkId(repository, id);
         createEntity(updatedTest);
     }
 
@@ -41,13 +36,11 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
 
     @Override
     public EntityDto getEntity(long id) {
-        //checkId(repository, id);
         return mapper.entityToDto(repository.getById(id));
     }
 
     @Override
     public void deleteEntity(long id) {
-        //checkId(repository, id);
         repository.deleteById(id);
     }
 
