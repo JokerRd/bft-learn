@@ -8,7 +8,9 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
     onEditQuestionDoubleClick: function (dv, record, item, index, e) {
         let id = record.data.id;
         let store = Ext.data.StoreManager.lookup('question-store');
-        let element = store.getById(id);
+        let element = store.findRecord('id', id);
+        console.log(id)
+        //let element = store.getById(id);
         let answers = createAnswerForForm(element.data.answers);
         let answerForm = Ext.create('Constructor.views.editorQuestions.configurationQuestions.AnswersPanel', {
             items: answers

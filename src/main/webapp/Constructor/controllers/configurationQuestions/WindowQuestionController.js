@@ -7,6 +7,7 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
         let store = Ext.data.StoreManager.lookup('question-store');
         let answers = form.items.get(3).items.get(0).items.items;
         let answersModel = createAnswerModel(answers);
+
         let question = Ext.create('Constructor.models.QuestionModel', {
                 idTest: 1,
                 nameQuestion: form.items.get(0).getValue(),
@@ -17,11 +18,20 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
         );
         console.log(form.getIdQuestions())
         if (form.getIdQuestions() !== -1) {
-            question.id = form.getIdQuestions();
+            question = Ext.create('Constructor.models.QuestionModel', {
+                    id: form.getIdQuestions(),
+                    idTest: 1,
+                    nameQuestion: form.items.get(0).getValue(),
+                    descriptionQuestion: form.items.get(1).getValue(),
+                    typeQuestion: form.items.get(2).getValue(),
+                    answers: answersModel
+                }
+            );
+            console.log(question.id)
         }
         question.save({
             success: function (){
-                location.reload();
+                //location.reload();
             }
         });
         window.close();

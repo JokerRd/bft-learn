@@ -2,6 +2,9 @@ Ext.define('Constructor.models.QuestionModel', {
     extend: 'Ext.data.Model',
     fields: [
         {
+            name: 'id'
+        },
+        {
             name: 'idClient',
             type: "integer"
         },
