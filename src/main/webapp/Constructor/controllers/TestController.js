@@ -2,7 +2,7 @@ Ext.define('Constructor.controllers.TestController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.test-controller',
     onSaveTestClick: function () {
-        let testStore = Ext.data.StoreManager.lookup('test-store');
+        /*let testStore = Ext.data.StoreManager.lookup('test-store');
         let questionStore = Ext.data.StoreManager.lookup('question-store');
         let primaryForm = this.lookupReference('primary-config');
         let secondaryForm = this.lookupReference('secondary-config');
@@ -10,10 +10,11 @@ Ext.define('Constructor.controllers.TestController', {
             nameTest: primaryForm.items.get(0).getValue(),
             descriptionTest: primaryForm.items.get(1).getValue(),
             isShowResult: secondaryForm.items.get(0).getValue()
-        });
-        testStore.add(testModel);
-        console.log(questionStore)
-        console.log(testModel)
+        });*/
+        let store = Ext.data.StoreManager.lookup('test-store');
+        //let model = Ext.data.schema.Schema.get('default').getEntity('SettingsTestModel');
+        //model.save();
+        store.update();
     },
     onLoadTest: function (obj, records, successful, operation) {
         if (successful) {
@@ -21,7 +22,6 @@ Ext.define('Constructor.controllers.TestController', {
             let store = Ext.data.StoreManager.lookup('test-store');
             let data = store.getById(1).data;
             viewModel.set('test', data)
-            console.log(viewModel);
         }
     },
     listen: {

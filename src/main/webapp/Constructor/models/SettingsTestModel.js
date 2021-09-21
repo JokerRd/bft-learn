@@ -1,5 +1,5 @@
 Ext.define('Constructor.models.SettingsTestModel', {
-    extend: 'Ext.data.Model',
+    extend: 'Constructor.models.BaseModel',
     fields: [
         {
             name: 'nameTest',
