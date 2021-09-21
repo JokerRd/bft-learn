@@ -16,27 +16,20 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
             }
         );
         console.log(form.getIdQuestions())
-        if (form.getIdQuestions() !== -1){
+        if (form.getIdQuestions() !== -1) {
             question.id = form.getIdQuestions();
         }
         question.save({
-            callback: function (record, operation, success) {
-                if (success) {
-                    store.load()
-                }
+            success: function (){
+                location.reload();
             }
         });
         window.close();
-    },
-    listen: {
-        store: {
-            'question'
-        }
     }
 });
 
 
-function createAnswerModel(answersFromForm){
+function createAnswerModel(answersFromForm) {
     let answersModel = []
     if (answersFromForm !== null && answersFromForm.length > 0) {
         let count = 1;

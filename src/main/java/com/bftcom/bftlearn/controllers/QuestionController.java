@@ -39,7 +39,7 @@ public class QuestionController extends AbstractController<QuestionDto> {
     }
 
     @PostMapping("/questions")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     public void createQuestion(@Validated({NewTest.class}) @RequestBody QuestionDto questionDto) {
         questionService.createEntity(questionDto);
     }
