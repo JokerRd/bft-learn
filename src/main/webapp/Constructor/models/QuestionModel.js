@@ -28,15 +28,19 @@ Ext.define('Constructor.models.QuestionModel', {
     idProperty: 'id',
     proxy: {
         type: 'rest',
+        paramsAsJson: true,
         api: {
             create: '/tests/questions',
-            read: '/{idTest}/questions',
-            update: '/questions',
-            destroy: '/questions'
+            read: '/tests/1/questions',
+            update: '/tests/questions',
+            destroy: '/tests/questions'
         },
         reader: {
             type: 'json',
             rootProperty: 'questions'
+        },
+        writer: {
+            writeAllFields: true
         }
     }
 })
