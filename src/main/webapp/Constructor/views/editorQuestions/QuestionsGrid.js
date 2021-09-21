@@ -1,12 +1,17 @@
 let questionsGrid = Ext.create('Constructor.stores.QuestionStore');
 
+let questionsViewModel = Ext.create('Constructor.viewModel.QuestionViewModel');
+
 Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     extend: 'Ext.grid.Panel',
     alias: 'widget.questions-grid',
     title: 'Вопросы',
     width: '100%',
     height: 500,
-    store: questionsGrid,
+    viewModel: questionsViewModel,
+    bind: {
+        store: '{questions}'
+    },
     listeners: {
         itemdblclick: 'onEditQuestionDoubleClick'
     },
