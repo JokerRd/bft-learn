@@ -5,9 +5,6 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
         let form = this.lookupReference('question-form');
         let window = form.findParentByType('window');
         let store = Ext.data.StoreManager.lookup('question-store');
-        //let lastElement = store.last();
-        //let lastIdElement = lastElement.get('id');
-        //let newIdElement = lastIdElement + 1;
         let answers = form.items.get(3).items.get(0).items.items;
         let answersModel = createAnswerModel(answers);
         let question = Ext.create('Constructor.models.QuestionModel', {
@@ -19,26 +16,22 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
             }
         );
         console.log(form.getIdQuestions())
-        if (form.getIdQuestions() === -1) {
-            question.save();
-            //store.add(question);
-        } else {
+        if (form.getIdQuestions() !== -1){
             question.id = form.getIdQuestions();
-            question.save();
-            /*let record = store.getById(form.getIdQuestions());
-            record.set(question.data);
-            record.commit();
-            console.log(question.data);
-            console.log(record);*/
         }
-        //window.close();
+        question.save({
+            callback: function (record, operation, success) {
+                if (success) {
+                    store.load()
+                }
+            }
+        });
+        window.close();
     },
-
-    onLoadTest: function (obj, records, successful, operation) {
-        console.log(obj);
-        console.log(records);
-        console.log(successful);
-        console.log(operation);
+    listen: {
+        store: {
+            'question'
+        }
     }
 });
 
@@ -49,7 +42,6 @@ function createAnswerModel(answersFromForm){
         let count = 1;
         for (let answer of answersFromForm) {
             let newAnswer = {
-                id: count,
                 answer: answer.items.get(0).getValue(),
                 isRight: answer.items.get(1).getValue()
             }

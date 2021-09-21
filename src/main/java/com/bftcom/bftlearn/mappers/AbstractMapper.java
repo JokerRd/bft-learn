@@ -4,6 +4,7 @@ import java.util.List;
 
 public interface AbstractMapper<EntityDto, Entity> {
 
+
     EntityDto entityToDto(Entity entity);
 
     Entity dtoToEntity(EntityDto dto);
