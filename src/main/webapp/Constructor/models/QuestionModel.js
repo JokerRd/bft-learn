@@ -6,6 +6,10 @@ Ext.define('Constructor.models.QuestionModel', {
             type: 'integer'
         },
         {
+            name: 'idTest',
+            type: "integer"
+        },
+        {
             name: 'nameQuestion',
             type: 'string'
         },
@@ -21,5 +25,18 @@ Ext.define('Constructor.models.QuestionModel', {
             name: 'answers'
         }
     ],
-    idProperty: 'id'
+    idProperty: 'id',
+    proxy: {
+        type: 'rest',
+        api: {
+            create: '/tests/questions',
+            read: '/{idTest}/questions',
+            update: '/questions',
+            destroy: '/questions'
+        },
+        reader: {
+            type: 'json',
+            rootProperty: 'questions'
+        }
+    }
 })
