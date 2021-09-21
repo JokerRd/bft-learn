@@ -2,8 +2,8 @@ Ext.define('Constructor.models.QuestionModel', {
     extend: 'Ext.data.Model',
     fields: [
         {
-            name: 'id',
-            type: 'integer'
+            name: 'idClient',
+            type: "integer"
         },
         {
             name: 'idTest',
@@ -25,10 +25,11 @@ Ext.define('Constructor.models.QuestionModel', {
             name: 'answers'
         }
     ],
-    idProperty: 'id',
+    idProperty: 'idClient',
     proxy: {
         type: 'rest',
         paramsAsJson: true,
+        appendId: false,
         api: {
             create: '/tests/questions',
             read: '/tests/1/questions',

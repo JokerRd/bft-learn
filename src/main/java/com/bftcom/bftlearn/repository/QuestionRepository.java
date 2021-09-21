@@ -9,4 +9,5 @@ import java.util.List;
 public interface QuestionRepository extends JpaRepository<QuestionEntity, Long> {
 
     public List<QuestionEntity> findAllByTestEntity(TestEntity testEntity);
+
 }

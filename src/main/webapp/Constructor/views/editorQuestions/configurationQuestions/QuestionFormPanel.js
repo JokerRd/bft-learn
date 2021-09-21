@@ -17,7 +17,7 @@ Ext.define('Constructor.views.editorQuestions.configurationQuestions.QuestionFor
         {
             xtype: 'textfield',
             fieldLabel: 'Название вопроса',
-            name: 'nameQuestion'
+            name: 'nameQuestion',
         },
         {
             xtype: 'textareafield',

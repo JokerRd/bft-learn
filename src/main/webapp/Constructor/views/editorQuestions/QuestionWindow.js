@@ -1,3 +1,5 @@
+let questionsViewModel = Ext.create('Constructor.viewModel.QuestionViewModel');
+
 Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.question-window',
@@ -7,6 +9,7 @@ Ext.define('Constructor.views.editorQuestions.QuestionWindow', {
         'Constructor.controllers.configurationQuestions.WindowQuestionController',
         'Constructor.views.editorQuestions.configurationQuestions.QuestionFormPanel'
     ],
+    viewModel: questionsViewModel,
     reference: 'question-window',
     height: "90vh",
     width: '70vw',

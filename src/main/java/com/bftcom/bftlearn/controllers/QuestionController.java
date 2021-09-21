@@ -1,6 +1,8 @@
 package com.bftcom.bftlearn.controllers;
 
 import com.bftcom.bftlearn.dto.question.QuestionDto;
+import com.bftcom.bftlearn.dto.test.NewTest;
+import com.bftcom.bftlearn.dto.test.UpdateTest;
 import com.bftcom.bftlearn.services.QuestionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
@@ -32,13 +34,13 @@ public class QuestionController extends AbstractController<QuestionDto> {
     }
 
     @PutMapping("/questions")
-    public void updateQuestion(@RequestBody QuestionDto questionDto) {
+    public void updateQuestion(@Validated({UpdateTest.class}) @RequestBody QuestionDto questionDto) {
         questionService.updateEntity(questionDto, questionDto.getId());
     }
 
     @PostMapping("/questions")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createQuestion(@RequestBody QuestionDto questionDto) {
+    public void createQuestion(@Validated({NewTest.class}) @RequestBody QuestionDto questionDto) {
         questionService.createEntity(questionDto);
     }
 
