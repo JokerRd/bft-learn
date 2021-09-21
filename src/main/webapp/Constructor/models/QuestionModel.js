@@ -2,11 +2,8 @@ Ext.define('Constructor.models.QuestionModel', {
     extend: 'Ext.data.Model',
     fields: [
         {
-            name: 'id'
-        },
-        {
-            name: 'idClient',
-            type: "integer"
+            name: 'id',
+            type: 'integer'
         },
         {
             name: 'idTest',
@@ -28,11 +25,17 @@ Ext.define('Constructor.models.QuestionModel', {
             name: 'answers'
         }
     ],
-    idProperty: 'idClient',
+    idProperty: 'id',
+    identifier: 'negative',
+    clientIdProperty: 'clientId',
     proxy: {
         type: 'rest',
-        paramsAsJson: true,
-        appendId: false,
+        actionMethods: {
+            create: 'POST',
+            read: 'GET',
+            update: 'PUT',
+            destroy: 'DELETE'
+        },
         api: {
             create: '/tests/questions',
             read: '/tests/1/questions',

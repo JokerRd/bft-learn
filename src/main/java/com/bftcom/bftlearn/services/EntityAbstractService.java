@@ -12,6 +12,11 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
     protected final AbstractMapper<EntityDto, Entity> mapper;
     protected final JpaRepository<Entity, Long> repository;
 
+
+    public EntityDto transformDto(EntityDto inputDto){
+        return inputDto;
+    }
+
     public String getMessageNotFoundId() {
         return "Неверный id";
     }
@@ -19,7 +24,7 @@ public abstract class EntityAbstractService<EntityDto, Entity> implements Entity
 
     @Override
     public void createEntity(EntityDto newTest) {
-        Entity entity = mapper.dtoToEntity(newTest);
+        Entity entity = mapper.dtoToEntity(transformDto(newTest));
         repository.save(entity);
     }
 

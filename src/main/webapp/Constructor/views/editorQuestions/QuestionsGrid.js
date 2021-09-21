@@ -43,10 +43,15 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
             items: [{
                 icon: 'Constructor/resources/del.png',
                 handler: function (grid, rowIndex, colIndex) {
-                    console.log(questionsGrid);
-                    questionsGrid.removeAt(rowIndex);
-
+                    //questionsGrid.removeAt(rowIndex);
+                    //console.log(questionsViewModel.getData().questions);
+                    let questions = questionsViewModel.getData().questions.data.items[rowIndex];
+                    console.log(questions)
+                    questions.erase()
+                    //let questionsModel = Ext.create('Constructor.models.QuestionModel', questions);
+                    //questionsModel.erase();
                     //let store = Ext.data.StoreManager.lookup('question-store');
+                    //store.removeAt(rowIndex)
                     //store.removeAt(rowIndex);
                 }
             }]

@@ -9,8 +9,6 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
         let id = record.data.id;
         let store = Ext.data.StoreManager.lookup('question-store');
         let element = store.findRecord('id', id);
-        console.log(id)
-        //let element = store.getById(id);
         let answers = createAnswerForForm(element.data.answers);
         let answerForm = Ext.create('Constructor.views.editorQuestions.configurationQuestions.AnswersPanel', {
             items: answers
@@ -18,6 +16,7 @@ Ext.define('Constructor.controllers.configurationQuestions.EditorQuestionsContro
         let form = Ext.create('Constructor.views.editorQuestions.configurationQuestions.QuestionFormPanel');
         form.getForm().setValues(element.data);
         form.setIdQuestions(id);
+        console.log(form.getIdQuestions());
         let answerPanel = form.items.last();
         answerPanel.remove(0);
         answerPanel.insert(0, answerForm);

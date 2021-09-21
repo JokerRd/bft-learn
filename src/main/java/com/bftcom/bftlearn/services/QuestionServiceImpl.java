@@ -40,4 +40,15 @@ public class QuestionServiceImpl
     public String getMessageNotFoundId() {
         return "Неверный id вопроса";
     }
+
+
+    @Override
+    public QuestionDto transformDto(QuestionDto inputDto) {
+        return inputDto.getId() == -1 ? new QuestionDto(null, inputDto.getIdTest(),
+                inputDto.getNameQuestion(),
+                inputDto.getDescriptionQuestion(),
+                inputDto.getTypeQuestion(),
+                inputDto.getAnswers())
+                : inputDto;
+    }
 }
