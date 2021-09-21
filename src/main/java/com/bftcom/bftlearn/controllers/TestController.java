@@ -45,9 +45,9 @@ public class TestController extends AbstractController<TestDto> {
         testService.createEntity(newTest);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     @Operation(summary = "Обновить тест")
-    public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest) {
+    public void updateTest(@Validated({UpdateTest.class}) @RequestBody TestDto updatedTest, @PathVariable int id) {
         testService.updateEntity(updatedTest);
     }
 }

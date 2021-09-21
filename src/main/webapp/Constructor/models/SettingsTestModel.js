@@ -2,6 +2,10 @@ Ext.define('Constructor.models.SettingsTestModel', {
     extend: 'Constructor.models.BaseModel',
     fields: [
         {
+            name: 'id',
+            type: 'integer'
+        },
+        {
             name: 'nameTest',
             type: 'string'
         },
@@ -17,6 +21,13 @@ Ext.define('Constructor.models.SettingsTestModel', {
     idProperty: 'id',
     proxy: {
         type: 'rest',
-        url : '/tests'
+        url : '/tests',
+        reader: {
+            type: 'json',
+            rootProperty: 'test'
+        },
+        writer: {
+            writeAllFields: true
+        }
     }
 })
