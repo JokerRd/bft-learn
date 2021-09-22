@@ -42,7 +42,8 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
                 handler: function (grid, rowIndex, colIndex) {
                     let questions = questionsViewModel.getData().questions.data.items[rowIndex];
                     console.log(questions)
-                    questions.erase()
+                    questions.erase();
+                    location.reload();
                 }
             }]
         }
