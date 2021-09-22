@@ -33,8 +33,9 @@ public class QuestionController extends AbstractController<QuestionDto> {
         return questionService.getEntity(id);
     }
 
-    @PutMapping("/questions")
-    public void updateQuestion(@Validated({UpdateTest.class}) @RequestBody QuestionDto questionDto) {
+    @PutMapping("/questions/{id}")
+    public void updateQuestion(@Validated({UpdateTest.class}) @RequestBody QuestionDto questionDto,
+                               @PathVariable long id) {
         questionService.updateEntity(questionDto, questionDto.getId());
     }
 

@@ -17,12 +17,12 @@ Ext.define('Constructor.controllers.configurationQuestions.WindowQuestionControl
         );
         console.log(form.getIdQuestions())
         if (form.getIdQuestions() !== -1) {
+            question.phantom = false;
             question.set('id', form.getIdQuestions());
-            console.log(question.id)
         }
         question.save({
             success: function (){
-                //location.reload();
+                location.reload();
             }
         });
         window.close();
