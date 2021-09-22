@@ -8,10 +8,7 @@ Ext.define('Constructor.views.editorQuestions.QuestionsGrid', {
     title: 'Вопросы',
     width: '100%',
     height: 500,
-    viewModel: questionsViewModel,
-    bind: {
-        store: '{questions}'
-    },
+    store: questionsGrid,
     listeners: {
         itemdblclick: 'onEditQuestionDoubleClick'
     },
