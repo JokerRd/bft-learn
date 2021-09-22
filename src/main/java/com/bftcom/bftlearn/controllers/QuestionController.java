@@ -1,6 +1,7 @@
 package com.bftcom.bftlearn.controllers;
 
 import com.bftcom.bftlearn.dto.question.QuestionDto;
+import com.bftcom.bftlearn.dto.question.QuestionPage;
 import com.bftcom.bftlearn.dto.test.NewTest;
 import com.bftcom.bftlearn.dto.test.UpdateTest;
 import com.bftcom.bftlearn.services.QuestionService;
@@ -24,8 +25,11 @@ public class QuestionController extends AbstractController<QuestionDto> {
     }
 
     @GetMapping("/{idTest}/questions")
-    public List<QuestionDto> getAllQuestions(@PathVariable @Min(value = 1, message = "Неверный id теста") long idTest) {
-        return questionService.getAllEntities(idTest);
+    public QuestionPage getAllQuestions(@PathVariable @Min(value = 1, message = "Неверный id теста") long idTest,
+                                        @RequestParam int page,
+                                        @RequestParam int start,
+                                        @RequestParam int limit) {
+        return questionService.getAllEntities(idTest, page, limit);
     }
 
     @GetMapping("/questions/{id}")

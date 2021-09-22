@@ -1,11 +1,14 @@
 package com.bftcom.bftlearn.services;
 
 import com.bftcom.bftlearn.dto.question.QuestionDto;
+import com.bftcom.bftlearn.dto.question.QuestionPage;
 import com.bftcom.bftlearn.entity.QuestionEntity;
 import com.bftcom.bftlearn.entity.TestEntity;
 import com.bftcom.bftlearn.mappers.QuestionModelMapper;
 import com.bftcom.bftlearn.repository.QuestionRepository;
 import com.bftcom.bftlearn.repository.TestRepository;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,9 +34,13 @@ public class QuestionServiceImpl
 
 
 
-    public List<QuestionDto> getAllEntities(long idTest) {
+    public QuestionPage getAllEntities(long idTest, int page, int limit) {
         TestEntity testEntity = testRepository.getById(idTest);
-        return mapper.entityToDtoList(questionRepository.findAllByTestEntity(testEntity));
+        Pageable pageable = PageRequest.of(page - 1, limit);
+        List<QuestionDto> questions = mapper
+                .entityToDtoList(questionRepository.findAllByTestEntity(testEntity, pageable));
+        long total = questionRepository.count();
+        return new QuestionPage(total, questions);
     }
 
     @Override
