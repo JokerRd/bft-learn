@@ -36,7 +36,8 @@ public class QuestionServiceImpl
 
     public QuestionPage getAllEntities(long idTest, int page, int limit) {
         TestEntity testEntity = testRepository.getById(idTest);
-        Pageable pageable = PageRequest.of(page - 1, limit);
+        int correctPage = page - 1;
+        Pageable pageable = PageRequest.of(correctPage, limit);
         List<QuestionDto> questions = mapper
                 .entityToDtoList(questionRepository.findAllByTestEntity(testEntity, pageable));
         long total = questionRepository.count();
