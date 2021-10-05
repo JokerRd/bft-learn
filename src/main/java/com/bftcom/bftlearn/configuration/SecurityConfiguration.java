@@ -10,13 +10,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final AuthorizeRequestCustom authorizeRequestCustom;
+    private final FormLoginConfigurerCustom formLoginConfigurerCustom;
 
-    public SecurityConfiguration(AuthorizeRequestCustom authorizeRequestCustom) {
+    public SecurityConfiguration(AuthorizeRequestCustom authorizeRequestCustom,
+                                 FormLoginConfigurerCustom formLoginConfigurerCustom) {
         this.authorizeRequestCustom = authorizeRequestCustom;
+        this.formLoginConfigurerCustom = formLoginConfigurerCustom;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests(authorizeRequestCustom::customize);
+        http.authorizeRequests(authorizeRequestCustom::customize)
+                .formLogin(formLoginConfigurerCustom);
     }
 }
