@@ -9,18 +9,23 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.sql.DataSource;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final AuthorizeRequestCustom authorizeRequestCustom;
+    private final DataSource dataSource;
     private final FormLoginConfigurerCustom formLoginConfigurerCustom;
     private final LogoutConfigurerCustom logoutConfigurerCustom;
 
     public SecurityConfiguration(AuthorizeRequestCustom authorizeRequestCustom,
+                                 DataSource dataSource,
                                  FormLoginConfigurerCustom formLoginConfigurerCustom,
                                  LogoutConfigurerCustom logoutConfigurerCustom) {
         this.authorizeRequestCustom = authorizeRequestCustom;
+        this.dataSource = dataSource;
         this.formLoginConfigurerCustom = formLoginConfigurerCustom;
         this.logoutConfigurerCustom = logoutConfigurerCustom;
     }
@@ -28,8 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests(authorizeRequestCustom)
-                .formLogin(formLoginConfigurerCustom)
-                .logout(logoutConfigurerCustom);
+                .formLogin();
     }
 
     @Bean
@@ -38,7 +42,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
+        auth.jdbcAuthentication()
+                .dataSource(dataSource)
+                .withDefaultSchema()
                 .withUser("user")
                 .password(passwordEncoder().encode("password"))
                 .roles("USER")

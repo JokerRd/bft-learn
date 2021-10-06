@@ -12,7 +12,3 @@ spring:
     view:
       prefix: /
       suffix: .jsp
-
-  thymeleaf:
-    check-template: false
-    check-template-location: false
