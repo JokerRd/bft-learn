@@ -44,10 +44,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
-                .usersByUsernameQuery("select username, password, 'true' from users " +
-                        "where login=?")
-                .authoritiesByUsernameQuery("select login, authority from users " +
-                        "where login=?")
+                .usersByUsernameQuery("select username, password, enabled from users " +
+                        "where username=?")
+                .authoritiesByUsernameQuery("select username, authority from authority " +
+                        "where username=?")
                 .withUser("user")
                 .password(passwordEncoder().encode("password"))
                 .roles("USER")
