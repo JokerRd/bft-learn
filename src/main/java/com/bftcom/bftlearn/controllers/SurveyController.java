@@ -30,4 +30,8 @@ public class SurveyController {
         return String.valueOf(testRepository.count());
     }
 
+    @GetMapping(value = "/login")
+    public String viewLogin(){
+        return "login";
+    }
 }

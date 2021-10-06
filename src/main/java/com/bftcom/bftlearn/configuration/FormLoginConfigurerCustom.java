@@ -11,8 +11,7 @@ public class FormLoginConfigurerCustom implements Customizer<FormLoginConfigurer
     @Override
     public void customize(FormLoginConfigurer<HttpSecurity> httpSecurityFormLoginConfigurer) {
         httpSecurityFormLoginConfigurer
-                .loginPage("/login.jsp")
-                .defaultSuccessUrl("/", true)
-                .failureUrl("/login");
+                .loginPage("/login")
+                .permitAll();
     }
 }

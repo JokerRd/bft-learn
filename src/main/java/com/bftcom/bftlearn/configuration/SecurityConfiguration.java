@@ -15,17 +15,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final AuthorizeRequestCustom authorizeRequestCustom;
     private final FormLoginConfigurerCustom formLoginConfigurerCustom;
+    private final LogoutConfigurerCustom logoutConfigurerCustom;
 
     public SecurityConfiguration(AuthorizeRequestCustom authorizeRequestCustom,
-                                 FormLoginConfigurerCustom formLoginConfigurerCustom) {
+                                 FormLoginConfigurerCustom formLoginConfigurerCustom,
+                                 LogoutConfigurerCustom logoutConfigurerCustom) {
         this.authorizeRequestCustom = authorizeRequestCustom;
         this.formLoginConfigurerCustom = formLoginConfigurerCustom;
+        this.logoutConfigurerCustom = logoutConfigurerCustom;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests(authorizeRequestCustom::customize)
-                .formLogin(formLoginConfigurerCustom);
+        http.authorizeRequests(authorizeRequestCustom)
+                .formLogin(formLoginConfigurerCustom)
+                .logout(logoutConfigurerCustom);
     }
 
     @Bean

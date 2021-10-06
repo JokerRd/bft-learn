@@ -1,14 +1,18 @@
 package com.bftcom.bftlearn.configuration;
 
 import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.configurers
-        .ExpressionUrlAuthorizationConfigurer.ExpressionInterceptUrlRegistry;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuthorizeRequestCustom implements Customizer<ExpressionInterceptUrlRegistry> {
+public class AuthorizeRequestCustom implements Customizer<ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry> {
+
     @Override
-    public void customize(ExpressionInterceptUrlRegistry expressionInterceptUrlRegistry) {
-        expressionInterceptUrlRegistry.anyRequest();
+    public void customize(ExpressionUrlAuthorizationConfigurer<HttpSecurity>
+                                      .ExpressionInterceptUrlRegistry expressionInterceptUrlRegistry) {
+        expressionInterceptUrlRegistry
+                .antMatchers("/login*").permitAll()
+                .anyRequest().authenticated();
     }
 }
