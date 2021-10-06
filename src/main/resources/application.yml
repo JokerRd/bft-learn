@@ -2,17 +2,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    open-in-view: off
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
-
-  security:
-    user:
-      name: 1
-      password: 1
   mvc:
     view:
       prefix: /
       suffix: .jsp
+
+  thymeleaf:
+    check-template: false
+    check-template-location: false
