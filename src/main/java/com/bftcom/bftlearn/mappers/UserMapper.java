@@ -1,14 +1,10 @@
 package com.bftcom.bftlearn.mappers;
 
 import com.bftcom.bftlearn.dto.UserDto;
-import com.bftcom.bftlearn.entity.Authority;
 import com.bftcom.bftlearn.entity.User;
 import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import java.util.Set;
-
 
 @Mapper(componentModel = "spring")
 public abstract class UserMapper {
