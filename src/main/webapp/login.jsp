@@ -9,23 +9,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
+    <meta charset="UTF-8" name="Vlad" content="Простой опросник">
+    <link rel="stylesheet" href="scripts/ext-js/themes/theme-neptune/resources/theme-neptune-all.css"/>
+    <script type="text/javascript" src="scripts/ext-js/js/ext-all.js"></script>
+    <script type="text/javascript" src="scripts/ext-js/js/ext-all-debug.js"></script>
+    <script type="text/javascript" src="scripts/ext-js/js/ext-locale-ru.js"></script>
+    <script type="application/javascript">
+        Ext.application({
+            name: 'More',
+            extend: 'Ext.app.Application',
+            launch: function(){
+                Ext.create('Login.views.Login',{
+                    renderTo: 'body'
+                });
+            }
+        });
+    </script>
 </head>
 <body>
-<h1>Авторизация</h1>
-<form name='f' th:action="@{/login}" method='POST'>
-    <table>
-        <tr>
-            <td>Имя пользователя:</td>
-            <td><input type='text' name='username' value=''></td>
-        </tr>
-        <tr>
-            <td>Пароль:</td>
-            <td><input type='password' name='password'/></td>
-        </tr>
-        <tr>
-            <td><input name="submit" type="submit" value="Подтвердить"/></td>
-        </tr>
-    </table>
-</form>
 </body>
 </html>
