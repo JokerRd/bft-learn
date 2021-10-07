@@ -1,6 +1,7 @@
 package com.bftcom.bftlearn.entity;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 
 @Entity(name = "users")
 @Getter
+@Setter
 public class User implements UserDetails {
 
     @Id

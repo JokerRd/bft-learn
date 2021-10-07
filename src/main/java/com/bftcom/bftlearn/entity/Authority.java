@@ -1,10 +1,14 @@
 package com.bftcom.bftlearn.entity;
 
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 
 @Entity(name = "authorities")
+@NoArgsConstructor
+@Setter
 public class Authority implements GrantedAuthority {
 
     @Id
@@ -24,5 +28,11 @@ public class Authority implements GrantedAuthority {
     @Override
     public String getAuthority() {
         return authority;
+    }
+
+    public Authority(String username, String authority, User user) {
+        this.username = username;
+        this.authority = authority;
+        this.user = user;
     }
 }
