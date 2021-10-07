@@ -16,7 +16,7 @@ public abstract class UserMapper {
     @Autowired
     protected PasswordEncoder passwordEncoder;
 
-    User dtoToEntity(UserDto dto) {
+    public User dtoToEntity(UserDto dto) {
         User user = new User();
         user.setUsername(dto.getUsername());
         user.setPassword(passwordEncoder.encode(dto.getPassword()));
