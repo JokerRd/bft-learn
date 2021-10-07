@@ -1,6 +1,7 @@
 package com.bftcom.bftlearn.handlers;
 
 import com.bftcom.bftlearn.dto.ErrorDto;
+import com.bftcom.bftlearn.exceptions.RegistrationException;
 import com.bftcom.bftlearn.exceptions.TestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,5 +17,11 @@ public class TestErrorHandler {
         return new ErrorDto(exception.getMessage());
     }
 
+
+    @ExceptionHandler(RegistrationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorDto handleUserException(RegistrationException exception){
+        return new ErrorDto(exception.getMessage());
+    }
 
 }

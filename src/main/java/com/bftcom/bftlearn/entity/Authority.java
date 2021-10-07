@@ -30,9 +30,8 @@ public class Authority implements GrantedAuthority {
         return authority;
     }
 
-    public Authority(String username, String authority, User user) {
+    public Authority(String username, String authority) {
         this.username = username;
         this.authority = authority;
-        this.user = user;
     }
 }
