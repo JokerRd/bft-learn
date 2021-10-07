@@ -26,4 +26,8 @@ public class UserService implements UserDetailsService {
         }
         return userOptional.get();
     }
+
+    public void AddUser(){
+
+    }
 }
