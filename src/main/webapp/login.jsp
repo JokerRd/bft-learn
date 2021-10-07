@@ -6,26 +6,26 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <title>Login</title>
-    <meta charset="UTF-8" name="Vlad" content="Простой опросник">
+    <meta charset="UTF-8" name="login" content="Страница входа">
     <link rel="stylesheet" href="scripts/ext-js/themes/theme-neptune/resources/theme-neptune-all.css"/>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all-debug.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-locale-ru.js"></script>
     <script type="application/javascript">
         Ext.application({
-            name: 'More',
+            name: 'AppLogin',
             extend: 'Ext.app.Application',
-            launch: function(){
-                Ext.create('Login.views.Login',{
+            launch: function () {
+                Ext.create('Login.views.Login', {
                     renderTo: 'body'
                 });
             }
         });
     </script>
+    <title>Login</title>
 </head>
-<body>
+<body id="body">
 </body>
 </html>

@@ -34,7 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests(authorizeRequestCustom)
                 .csrf().disable()
-                .formLogin(formLoginConfigurerCustom);
+                .formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll().and().logout(logoutConfigurerCustom);
     }
 
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
