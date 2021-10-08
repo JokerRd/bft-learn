@@ -24,7 +24,6 @@
             }
         });
     </script>
-    <title>Конструктор опросов</title>
 </head>
 <body id="bodys">
 </body>
