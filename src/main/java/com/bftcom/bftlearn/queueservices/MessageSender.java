@@ -10,14 +10,14 @@ public class MessageSender {
 
     private final RabbitTemplate template;
 
-    private final Queue queue;
+    private final Queue messageQueue;
 
-    public MessageSender(RabbitTemplate template, Queue queue) {
+    public MessageSender(RabbitTemplate template, Queue messageQueue) {
         this.template = template;
-        this.queue = queue;
+        this.messageQueue = messageQueue;
     }
 
-    public void Send(MessageForQueue message){
-        template.convertAndSend(queue.getName(), message);
+    public void send(MessageForQueue message){
+        template.convertAndSend(messageQueue.getName(), message);
     }
 }

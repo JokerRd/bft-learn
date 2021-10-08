@@ -13,6 +13,9 @@ public class MessageQueueEntity {
     @Column(name = "message")
     private String message;
 
+    @Column(name = "theme")
+    private String theme;
+
     @Column(name = "datetime_message")
     private LocalDateTime dateTimeMessage;
 
