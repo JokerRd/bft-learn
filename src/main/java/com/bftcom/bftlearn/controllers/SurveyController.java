@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 
 @Controller
@@ -39,8 +40,8 @@ public class SurveyController {
 
     @PostMapping(value = "/registration")
     @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public void registerUser(@RequestBody UserDto userDto){
+    public RedirectView registerUser(UserDto userDto){
         userService.AddUser(userDto);
+        return new RedirectView("/");
     }
 }

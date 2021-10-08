@@ -11,7 +11,7 @@ Ext.define('Registration.views.RegistrationForm', {
     items: [{
         xtype: 'textfield',
         fieldLabel: 'Логин',
-        name: 'login',
+        name: 'username',
         labelAlign: 'top',
         cls: 'field-margin',
         flex: 1,
@@ -28,10 +28,11 @@ Ext.define('Registration.views.RegistrationForm', {
     buttons: [{
         text: 'Оправить',
         handler: function () {
-            this.getForm().submit({
+            let form = this.findParentByType('form');
+            form.getForm().submit({
                 url: '/registration',
                 success: function (form, action) {
-                    Ext.MessageBox.alert('Регистрация пройдена. ', action.result.message);
+                    document.location = '/'
                 },
                 failure: function (form, action) {
                     Ext.MessageBox.alert('Уже зарегистрированы. ', action.result.message);

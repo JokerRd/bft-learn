@@ -14,7 +14,10 @@ public class AuthorizeRequestCustom implements Customizer<ExpressionUrlAuthoriza
     public void customize(ExpressionUrlAuthorizationConfigurer<HttpSecurity>
                                       .ExpressionInterceptUrlRegistry expressionInterceptUrlRegistry) {
         expressionInterceptUrlRegistry
+                .antMatchers("/scripts/**").permitAll()
+                .antMatchers("/Registration/**").permitAll()
+                .antMatchers("/Login/**").permitAll()
                 .antMatchers("/registration").not().fullyAuthenticated()
-                .anyRequest().permitAll();
+                .anyRequest().authenticated();
     }
 }

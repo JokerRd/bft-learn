@@ -11,7 +11,7 @@ Ext.define('Login.views.LoginForm', {
     items: [{
         xtype: 'textfield',
         fieldLabel: 'Логин',
-        name: 'login',
+        name: 'username',
         labelAlign: 'top',
         cls: 'field-margin',
         flex: 1,
@@ -28,13 +28,16 @@ Ext.define('Login.views.LoginForm', {
     buttons: [{
         text: 'Оправить',
         handler: function () {
-            this.getForm().submit({
+            let form = this.findParentByType('form');
+            form.getForm().submit({
                 url: '/login',
-                success: function (form, action) {
-                    Ext.MessageBox.alert('Авторизация пройдена. ', action.result.message);
-                },
                 failure: function (form, action) {
-                    Ext.MessageBox.alert('Ошибка авторизации. ', action.result.message);
+                    console.log(action)
+                    if (action.response.status === 200) {
+                        document.location = "/"
+                    } else {
+                        Ext.MessageBox.alert('Ошибка авторизации');
+                    }
                 }
             });
         }
