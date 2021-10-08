@@ -1,10 +1,10 @@
-Ext.define('Login.views.Login', {
+Ext.define('Registration.views.Registration', {
     extend: 'Ext.form.Panel',
     alias: 'widget.login',
     width: "30%",
     height: "50%",
     layout: "center",
-    title: "Вход",
+    title: "Регистрация",
     items: [{
         xtype: 'textfield',
         fieldLabel: 'Логин',
@@ -24,12 +24,12 @@ Ext.define('Login.views.Login', {
         text: 'Оправить',
         handler: function () {
             this.getForm().submit({
-                url: '/login',
+                url: '/registration',
                 success: function (form, action) {
-                    Ext.MessageBox.alert('Авторизация пройдена. ', action.result.message);
+                    Ext.MessageBox.alert('Регистрация пройдена. ', action.result.message);
                 },
                 failure: function (form, action) {
-                    Ext.MessageBox.alert('Ошибка авторизации. ', action.result.message);
+                    Ext.MessageBox.alert('Уже зарегистрированы. ', action.result.message);
                 }
             });
         }

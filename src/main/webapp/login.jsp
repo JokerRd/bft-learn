@@ -19,13 +19,13 @@
             extend: 'Ext.app.Application',
             launch: function () {
                 Ext.create('Login.views.Login', {
-                    renderTo: 'body'
+                    renderTo: 'body2'
                 });
             }
         });
     </script>
     <title>Login</title>
 </head>
-<body id="body">
+<body id="body2">
 </body>
 </html>

@@ -1,25 +1,26 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="scripts/ext-js/themes/theme-neptune/resources/theme-neptune-all.css"/>
+    <script type="text/javascript" src="scripts/ext-js/js/ext-all.js"></script>
+    <script type="text/javascript" src="scripts/ext-js/js/ext-all-debug.js"></script>
+    <script type="text/javascript" src="scripts/ext-js/js/ext-locale-ru.js"></script>
+    <script type="application/javascript">
+        Ext.application({
+            name: 'Reg',
+            extend: 'Ext.app.Application',
+            launch: function(){
+                Ext.create('Registration.views.Registration',{
+                    renderTo: 'body1'
+                });
+            }
+        });
+    </script>
     <title>Регистрация</title>
 </head>
 
-<body>
-<div>
-    <h2>Регистрация</h2>
-    <div>
-    </div>
-    <div>
-    </div>
-    <div>
-    </div>
-    <button type="submit">Зарегистрироваться</button>
-    <a href="/">Главная</a>
-</div>
+<body id="body1">
 </body>
 </html>
