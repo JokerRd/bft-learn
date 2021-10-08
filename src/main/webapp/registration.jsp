@@ -1,26 +1,31 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: v.konkov
+  Date: 09.09.2021
+  Time: 12:37
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="scripts/ext-js/themes/theme-neptune/resources/theme-neptune-all.css"/>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-all-debug.js"></script>
     <script type="text/javascript" src="scripts/ext-js/js/ext-locale-ru.js"></script>
     <script type="application/javascript">
         Ext.application({
-            name: 'Reg',
+            name: 'MoreMore',
             extend: 'Ext.app.Application',
             launch: function(){
-                Ext.create('Registration.views.Registration',{
-                    renderTo: 'body1'
+                Ext.create('Registration.views.RegistrationPanel',{
+                    renderTo: 'bodys'
                 });
             }
         });
     </script>
-    <title>Регистрация</title>
+    <title>Конструктор опросов</title>
 </head>
-
-<body id="body1">
+<body id="bodys">
 </body>
 </html>

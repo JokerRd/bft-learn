@@ -15,6 +15,6 @@ public class AuthorizeRequestCustom implements Customizer<ExpressionUrlAuthoriza
                                       .ExpressionInterceptUrlRegistry expressionInterceptUrlRegistry) {
         expressionInterceptUrlRegistry
                 .antMatchers("/registration").not().fullyAuthenticated()
-                .anyRequest().authenticated();
+                .anyRequest().permitAll();
     }
 }

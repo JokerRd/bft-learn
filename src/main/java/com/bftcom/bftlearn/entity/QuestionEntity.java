@@ -31,6 +31,6 @@ public class QuestionEntity {
     @Column(name = "type_question")
     private String typeQuestion;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<AnswerEntity> answers;
 }

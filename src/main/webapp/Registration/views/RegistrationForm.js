@@ -1,24 +1,29 @@
-Ext.define('Registration.views.Registration', {
+Ext.define('Registration.views.RegistrationForm', {
     extend: 'Ext.form.Panel',
-    alias: 'widget.login',
-    width: "30%",
-    height: "50%",
-    layout: "center",
+    alias: 'widget.registration-form',
     title: "Регистрация",
+    layout: 'anchor',
+    width: '30%',
+    height: '50%',
+    defaults: {
+        anchor: '100%'
+    },
     items: [{
         xtype: 'textfield',
         fieldLabel: 'Логин',
         name: 'login',
         labelAlign: 'top',
         cls: 'field-margin',
-        flex: 1
+        flex: 1,
+        margin: '5 5 5 5'
     }, {
         xtype: 'textfield',
         fieldLabel: 'Пароль',
         name: 'password',
         labelAlign: 'top',
         cls: 'field-margin',
-        flex: 1
+        flex: 1,
+        margin: '5 5 5 5'
     }],
     buttons: [{
         text: 'Оправить',
