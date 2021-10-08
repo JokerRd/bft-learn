@@ -1,15 +1,21 @@
 package com.bftcom.bftlearn.dto;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.time.LocalDateTime;
-
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class MessageForQueue {
 
-    private final String message;
+    private  String message;
 
-    private final String theme;
+    private  String theme;
 
-    private final LocalDateTime dateTimeMessage;
+    public MessageForQueue(String message, String theme) {
+        this.message = message;
+        this.theme = theme;
+    }
 }

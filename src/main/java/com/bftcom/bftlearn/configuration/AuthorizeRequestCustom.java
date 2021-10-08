@@ -18,6 +18,6 @@ public class AuthorizeRequestCustom implements Customizer<ExpressionUrlAuthoriza
                 .antMatchers("/Registration/**").permitAll()
                 .antMatchers("/Login/**").permitAll()
                 .antMatchers("/registration").not().fullyAuthenticated()
-                .anyRequest().authenticated();
+                .anyRequest().permitAll();
     }
 }

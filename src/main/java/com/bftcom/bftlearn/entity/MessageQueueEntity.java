@@ -1,9 +1,14 @@
 package com.bftcom.bftlearn.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
-import java.time.LocalDateTime;
+
 
 @Entity(name = "messages")
+@Getter
+@Setter
 public class MessageQueueEntity {
 
     @Id
@@ -15,8 +20,4 @@ public class MessageQueueEntity {
 
     @Column(name = "theme")
     private String theme;
-
-    @Column(name = "datetime_message")
-    private LocalDateTime dateTimeMessage;
-
 }

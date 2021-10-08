@@ -8,7 +8,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues = "messageQueue")
+@RabbitListener(queues = "messageQueue",
+        messageConverter = "jsonMessageConverter")
 public class MessageReceiver {
 
     private final MessageQueueRepository messageQueueRepository;
