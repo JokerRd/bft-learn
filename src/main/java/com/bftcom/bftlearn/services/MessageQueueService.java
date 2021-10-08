@@ -8,4 +8,6 @@ import java.util.List;
 public interface MessageQueueService {
 
     List<MessageForQueue> getAllMessagesByTheme(String theme);
+
+    Boolean isEvenNumber(int number);
 }

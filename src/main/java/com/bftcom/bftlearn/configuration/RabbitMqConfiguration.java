@@ -1,7 +1,6 @@
 package com.bftcom.bftlearn.configuration;
 
-import org.springframework.amqp.core.AmqpTemplate;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
@@ -16,6 +15,24 @@ public class RabbitMqConfiguration
     @Bean
     public Queue messageQueue(){
         return new Queue("messageQueue");
+    }
+
+    @Bean
+    public Queue exchangeQueue(){
+        return new Queue("exchange.rpc.messageQueue");
+    }
+
+    @Bean
+    public DirectExchange exchange() {
+        return new DirectExchange("exchange.rpc");
+    }
+
+    @Bean
+    public Binding binding(DirectExchange exchange,
+                           Queue exchangeQueue) {
+        return BindingBuilder.bind(exchangeQueue)
+                .to(exchange)
+                .with("rpc");
     }
 
     @Bean

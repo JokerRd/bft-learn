@@ -28,4 +28,9 @@ public class RabbitMqController {
         return messageQueueService.getAllMessagesByTheme(theme);
     }
 
+    @GetMapping("/queue/even/{number}")
+    public Boolean isEvenNumber(@PathVariable int number){
+        return messageQueueService.isEvenNumber(number);
+    }
+
 }

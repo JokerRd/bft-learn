@@ -2,6 +2,7 @@ package com.bftcom.bftlearn.queueservices;
 
 import com.bftcom.bftlearn.dto.MessageForQueue;
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
