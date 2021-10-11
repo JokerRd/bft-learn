@@ -1,7 +1,7 @@
-package com.bftcom.bftlearn.queueservices;
+package com.bftcom.bftlearn.queueservices.validatedanswer;
 
 import com.bftcom.bftlearn.dto.AnswersUser;
-import com.bftcom.bftlearn.dto.ResultQuestionChecking;
+import com.bftcom.bftlearn.dto.VerifiedAnswersUser;
 import com.bftcom.bftlearn.entity.AnswerEntity;
 import com.bftcom.bftlearn.entity.QuestionEntity;
 import com.bftcom.bftlearn.entity.TestEntity;
@@ -28,27 +28,27 @@ public class ValidatedAnswerUserReceiver {
     @RabbitListener(queues = "exchange.rpc.answersUser",
             messageConverter = "jsonMessageConverter")
     @SendTo("exchange.rpc.verified")
-    public List<ResultQuestionChecking> validate(AnswersUser answersUser){
+    public List<VerifiedAnswersUser> validate(AnswersUser answersUser){
         TestEntity testEntity = testRepository.getById(answersUser.getIdTest());
         List<QuestionEntity> questionEntities  = questionRepository.findAllByTestEntity(testEntity);
         Map<Long, List<String>> mapAnswersUser = answersUser.getAnswersByIdQuestion();
         return getResultsQuestionChecking(questionEntities, mapAnswersUser);
     }
 
-    private List<ResultQuestionChecking> getResultsQuestionChecking(List<QuestionEntity> questionEntities,
-                                                                    Map<Long, List<String>> mapAnswersUser){
+    private List<VerifiedAnswersUser> getResultsQuestionChecking(List<QuestionEntity> questionEntities,
+                                                                 Map<Long, List<String>> mapAnswersUser){
         return questionEntities.stream()
                 .map(questionEntity -> createResultQuestionChecking(questionEntity, mapAnswersUser))
                 .collect(Collectors.toList());
     }
 
-    private ResultQuestionChecking createResultQuestionChecking(QuestionEntity questionEntity,
-                                                                Map<Long, List<String>> mapAnswersUser){
+    private VerifiedAnswersUser createResultQuestionChecking(QuestionEntity questionEntity,
+                                                             Map<Long, List<String>> mapAnswersUser){
         String nameQuestion = questionEntity.getNameQuestion();
         List<String> currentAnswersUser = mapAnswersUser.get(questionEntity.getId());
         List<String> rightAnswers = getRightAnswers(questionEntity);
         boolean isRightAnswersUser = isRightAnswersUser(rightAnswers, currentAnswersUser);
-        return new ResultQuestionChecking(nameQuestion, currentAnswersUser, rightAnswers, isRightAnswersUser);
+        return new VerifiedAnswersUser(nameQuestion, currentAnswersUser, rightAnswers, isRightAnswersUser);
     }
 
 

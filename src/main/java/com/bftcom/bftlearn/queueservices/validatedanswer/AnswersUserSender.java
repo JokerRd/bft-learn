@@ -1,4 +1,4 @@
-package com.bftcom.bftlearn.queueservices;
+package com.bftcom.bftlearn.queueservices.validatedanswer;
 
 import com.bftcom.bftlearn.dto.AnswersUser;
 import org.springframework.amqp.core.AmqpTemplate;
