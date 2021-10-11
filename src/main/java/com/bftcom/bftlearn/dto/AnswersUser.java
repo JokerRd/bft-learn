@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -15,5 +16,5 @@ public class AnswersUser {
 
     private Long idTest;
 
-    private Map<Long, String> answersByIdQuestion;
+    private Map<Long, List<String>> answersByIdQuestion;
 }

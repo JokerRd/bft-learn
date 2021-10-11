@@ -1,5 +1,6 @@
 package com.bftcom.bftlearn.queueservices;
 
+import com.bftcom.bftlearn.dto.AnswersUser;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.stereotype.Component;
@@ -15,9 +16,8 @@ public class AnswersUserSender {
         this.exchange = exchange;
     }
 
-    public Boolean send(int number){
-        template.convertAndSend(exchange.getName(), "rpc", number);
-        return (Boolean) template.convertSendAndReceive(exchange.getName(), "rpc", number);
+    public void send(AnswersUser answersUser){
+        template.convertAndSend(exchange.getName(), "rpc.answersUser", answersUser);
     }
 
 

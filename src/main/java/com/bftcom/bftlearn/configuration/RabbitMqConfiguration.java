@@ -9,26 +9,25 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RabbitMqConfiguration
-{
+public class RabbitMqConfiguration {
 
     @Bean
-    public Queue messageQueue(){
+    public Queue messageQueue() {
         return new Queue("messageQueue");
     }
 
     @Bean
-    public Queue answersUserQueue(){
+    public Queue answersUserQueue() {
         return new Queue("exchange.rpc.answersUser");
     }
 
     @Bean
-    public Queue verifiedAnswerQueue(){
+    public Queue verifiedAnswerQueue() {
         return new Queue("exchange.rpc.verified");
     }
 
     @Bean
-    public Queue exchangeQueue(){
+    public Queue exchangeQueue() {
         return new Queue("exchange.rpc.messageQueue");
     }
 
@@ -45,7 +44,19 @@ public class RabbitMqConfiguration
                 .with("rpc");
     }
 
-    public Binding bindingA
+
+    @Bean
+    public Binding bindingAnswersUser(DirectExchange exchange,
+                                      Queue answersUserQueue) {
+        return BindingBuilder.bind(answersUserQueue).to(exchange).with("rpc.answersUser");
+    }
+
+
+    @Bean
+    public Binding bindingVerifiedAnswer(DirectExchange exchange,
+                                      Queue verifiedAnswerQueue) {
+        return BindingBuilder.bind(verifiedAnswerQueue).to(exchange).with("rpc.verified");
+    }
 
     @Bean
     public MessageConverter jsonMessageConverter() {
