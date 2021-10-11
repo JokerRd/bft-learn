@@ -1,5 +1,6 @@
 package com.bftcom.bftlearn.controllers;
 
+import com.bftcom.bftlearn.dto.AnswersUser;
 import com.bftcom.bftlearn.dto.MessageForQueue;
 import com.bftcom.bftlearn.queueservices.MessageSender;
 import com.bftcom.bftlearn.services.MessageQueueService;
@@ -31,6 +32,12 @@ public class RabbitMqController {
     @GetMapping("/queue/even/{number}")
     public Boolean isEvenNumber(@PathVariable int number){
         return messageQueueService.isEvenNumber(number);
+    }
+
+
+    @PostMapping("queue/answers")
+    public void sendAnswerOnChecking(@RequestBody AnswersUser answersUser){
+
     }
 
 }
