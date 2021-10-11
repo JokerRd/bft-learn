@@ -45,4 +45,6 @@ public class MessageQueueServiceImpl implements MessageQueueService {
     public List<ResultQuestionChecking> getVerifiedTest(String username, long idTest) {
         return null;
     }
+
+
 }

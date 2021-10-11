@@ -38,13 +38,13 @@ public class RabbitMqController {
 
     @PostMapping("queue/answers")
     public void sendAnswersUserOnChecking(@RequestBody AnswersUser answersUser) {
-
+        messageQueueService.sendAnswersUserOnChecking(answersUser);
     }
 
     @GetMapping("queue/answers/verified/{username}/{idTest}")
     public List<ResultQuestionChecking> getVerifiedTest(@PathVariable String username,
                                                         @PathVariable long idTest) {
-        return null;
+        return messageQueueService.getVerifiedTest(username, idTest);
     }
 
 }

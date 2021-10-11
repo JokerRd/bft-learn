@@ -18,6 +18,16 @@ public class RabbitMqConfiguration
     }
 
     @Bean
+    public Queue answersUserQueue(){
+        return new Queue("exchange.rpc.answersUser");
+    }
+
+    @Bean
+    public Queue verifiedAnswerQueue(){
+        return new Queue("exchange.rpc.verified");
+    }
+
+    @Bean
     public Queue exchangeQueue(){
         return new Queue("exchange.rpc.messageQueue");
     }
@@ -34,6 +44,8 @@ public class RabbitMqConfiguration
                 .to(exchange)
                 .with("rpc");
     }
+
+    public Binding bindingA
 
     @Bean
     public MessageConverter jsonMessageConverter() {
