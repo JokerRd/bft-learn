@@ -1,6 +1,8 @@
 package com.bftcom.bftlearn.services;
 
+import com.bftcom.bftlearn.dto.AnswersUser;
 import com.bftcom.bftlearn.dto.MessageForQueue;
+import com.bftcom.bftlearn.dto.ResultQuestionChecking;
 import com.bftcom.bftlearn.mappers.MessageQueueMapper;
 import com.bftcom.bftlearn.queueservices.MessageRpcSender;
 import com.bftcom.bftlearn.repository.MessageQueueRepository;
@@ -32,5 +34,15 @@ public class MessageQueueServiceImpl implements MessageQueueService {
     @Override
     public Boolean isEvenNumber(int number) {
         return messageRpcSender.send(number);
+    }
+
+    @Override
+    public void sendAnswersUserOnChecking(AnswersUser answersUser) {
+
+    }
+
+    @Override
+    public List<ResultQuestionChecking> getVerifiedTest(String username, long idTest) {
+        return null;
     }
 }
