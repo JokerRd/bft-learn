@@ -5,9 +5,11 @@ import com.bftcom.bftlearn.dto.VerifiedAnswersUser;
 import com.bftcom.bftlearn.queueservices.validatedanswer.AnswersUserSender;
 import com.bftcom.bftlearn.queueservices.validatedanswer.VerifiedAnswerFromQueue;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
 public class ValidatedAnswersUserWithRabbit implements ValidatedAnswersUserService{
 

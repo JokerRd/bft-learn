@@ -53,8 +53,10 @@ public class ValidatedAnswerUserReceiver {
 
 
     private List<String> getRightAnswers(QuestionEntity questionEntity){
-        return questionEntity.getAnswers()
-                .stream().map(AnswerEntity::getAnswer).collect(Collectors.toList());
+        return questionEntity.getAnswers().stream()
+                .filter(AnswerEntity::isRight)
+                .map(AnswerEntity::getAnswer)
+                .collect(Collectors.toList());
     }
 
     private boolean isRightAnswersUser(List<String> answersUser, List<String> rightAnswers){

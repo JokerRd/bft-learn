@@ -17,7 +17,7 @@ public class VerifiedAnswersUserReceiver implements VerifiedAnswerFromQueue {
         this.allVerifiedAnswersUsers = new ArrayList<>();
     }
 
-    @RabbitListener(queues = "exchange.rpc.answersUser",
+    @RabbitListener(queues = "exchange.rpc.verified",
             messageConverter = "jsonMessageConverter")
     public void receive(List<VerifiedAnswersUser> checkingList) {
         allVerifiedAnswersUsers.addAll(checkingList);
