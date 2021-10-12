@@ -32,23 +32,26 @@ public class ValidatedAnswerUserReceiver {
         TestEntity testEntity = testRepository.getById(answersUser.getIdTest());
         List<QuestionEntity> questionEntities  = questionRepository.findAllByTestEntity(testEntity);
         Map<Long, List<String>> mapAnswersUser = answersUser.getAnswersByIdQuestion();
-        return getResultsQuestionChecking(questionEntities, mapAnswersUser);
+        return getResultsQuestionChecking(questionEntities, mapAnswersUser, answersUser.getUsername());
     }
 
     private List<VerifiedAnswersUser> getResultsQuestionChecking(List<QuestionEntity> questionEntities,
-                                                                 Map<Long, List<String>> mapAnswersUser){
+                                                                 Map<Long, List<String>> mapAnswersUser,
+                                                                 String username){
         return questionEntities.stream()
-                .map(questionEntity -> createResultQuestionChecking(questionEntity, mapAnswersUser))
+                .map(questionEntity -> createResultQuestionChecking(questionEntity, mapAnswersUser, username))
                 .collect(Collectors.toList());
     }
 
     private VerifiedAnswersUser createResultQuestionChecking(QuestionEntity questionEntity,
-                                                             Map<Long, List<String>> mapAnswersUser){
+                                                             Map<Long, List<String>> mapAnswersUser,
+                                                             String username){
         String nameQuestion = questionEntity.getNameQuestion();
         List<String> currentAnswersUser = mapAnswersUser.get(questionEntity.getId());
         List<String> rightAnswers = getRightAnswers(questionEntity);
         boolean isRightAnswersUser = isRightAnswersUser(rightAnswers, currentAnswersUser);
-        return new VerifiedAnswersUser(nameQuestion, currentAnswersUser, rightAnswers, isRightAnswersUser);
+        return new VerifiedAnswersUser(username, questionEntity.getIdTest(),nameQuestion,
+                currentAnswersUser, rightAnswers, isRightAnswersUser);
     }
 
 

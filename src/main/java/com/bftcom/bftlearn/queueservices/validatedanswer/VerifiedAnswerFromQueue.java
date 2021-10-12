@@ -7,4 +7,6 @@ import java.util.List;
 public interface VerifiedAnswerFromQueue {
 
     List<VerifiedAnswersUser> getAllVerifiedAnswers();
+
+    VerifiedAnswersUser getVerifiedAnswersByUsernameAndByIdTes(String username, long idTest);
 }

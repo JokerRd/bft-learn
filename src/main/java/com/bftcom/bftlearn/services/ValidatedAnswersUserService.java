@@ -10,6 +10,6 @@ import java.util.List;
 public interface ValidatedAnswersUserService {
     void sendAnswersUserOnChecking(AnswersUser answersUser);
 
-    List<VerifiedAnswersUser> getVerifiedAnswersUsers(String username, long idTest);
+    VerifiedAnswersUser getVerifiedAnswersUsers(String username, long idTest);
 
 }

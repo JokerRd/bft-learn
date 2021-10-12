@@ -41,7 +41,7 @@ public class RabbitMqController {
     }
 
     @GetMapping("queue/answers/verified/{username}/{idTest}")
-    public List<VerifiedAnswersUser> getVerifiedTest(@PathVariable String username,
+    public VerifiedAnswersUser getVerifiedTest(@PathVariable String username,
                                                      @PathVariable long idTest) {
         return validatedAnswersUserService.getVerifiedAnswersUsers(username, idTest);
     }

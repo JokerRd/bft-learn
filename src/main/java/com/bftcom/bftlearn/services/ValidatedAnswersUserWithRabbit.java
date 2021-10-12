@@ -7,8 +7,6 @@ import com.bftcom.bftlearn.queueservices.validatedanswer.VerifiedAnswerFromQueue
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @RequiredArgsConstructor
 public class ValidatedAnswersUserWithRabbit implements ValidatedAnswersUserService{
@@ -22,7 +20,7 @@ public class ValidatedAnswersUserWithRabbit implements ValidatedAnswersUserServi
     }
 
     @Override
-    public List<VerifiedAnswersUser> getVerifiedAnswersUsers(String username, long idTest) {
-        return verifiedAnswerFromQueue.getAllVerifiedAnswers();
+    public VerifiedAnswersUser getVerifiedAnswersUsers(String username, long idTest) {
+        return verifiedAnswerFromQueue.getVerifiedAnswersByUsernameAndByIdTes(username, idTest);
     }
 }
